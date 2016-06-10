@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8439B3FE1D0B474C00A0AB73 /* AKFriendsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3DE1D0B474C00A0AB73 /* AKFriendsContext.m */; };
+		8439B3FF1D0B474C00A0AB73 /* AKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3E21D0B474C00A0AB73 /* AKUser.m */; };
+		8439B4001D0B474C00A0AB73 /* AKFriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3E61D0B474C00A0AB73 /* AKFriendDetailViewController.m */; };
+		8439B4011D0B474C00A0AB73 /* AKFriendDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3E71D0B474C00A0AB73 /* AKFriendDetailViewController.xib */; };
+		8439B4021D0B474C00A0AB73 /* AKFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3EA1D0B474C00A0AB73 /* AKFriendsViewController.m */; };
+		8439B4031D0B474C00A0AB73 /* AKFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3EB1D0B474C00A0AB73 /* AKFriendsViewController.xib */; };
+		8439B4041D0B474C00A0AB73 /* AKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3EF1D0B474C00A0AB73 /* AKLoginView.m */; };
+		8439B4051D0B474C00A0AB73 /* AKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3F11D0B474C00A0AB73 /* AKLoginViewController.m */; };
+		8439B4061D0B474C00A0AB73 /* AKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3F21D0B474C00A0AB73 /* AKLoginViewController.xib */; };
+		8439B4071D0B474C00A0AB73 /* AKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3F61D0B474C00A0AB73 /* AKAppDelegate.m */; };
+		8439B4081D0B474C00A0AB73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3F71D0B474C00A0AB73 /* Assets.xcassets */; };
+		8439B4091D0B474C00A0AB73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3F81D0B474C00A0AB73 /* LaunchScreen.storyboard */; };
+		8439B40A1D0B474C00A0AB73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3FA1D0B474C00A0AB73 /* Main.storyboard */; };
+		8439B40B1D0B474C00A0AB73 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3FC1D0B474C00A0AB73 /* Info.plist */; };
+		8439B40C1D0B474C00A0AB73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3FD1D0B474C00A0AB73 /* main.m */; };
+		8F0640F07C92049E9B5351EA /* libPods-AKFacebook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D80AF07FD4F53B9A26F9A9AF /* libPods-AKFacebook.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		79298EF1B753A59B5E794EA5 /* Pods-AKFacebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.release.xcconfig"; sourceTree = "<group>"; };
+		8439B3BF1D0B464E00A0AB73 /* AKFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8439B3DD1D0B474C00A0AB73 /* AKFriendsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendsContext.h; sourceTree = "<group>"; };
+		8439B3DE1D0B474C00A0AB73 /* AKFriendsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsContext.m; sourceTree = "<group>"; };
+		8439B3E11D0B474C00A0AB73 /* AKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUser.h; sourceTree = "<group>"; };
+		8439B3E21D0B474C00A0AB73 /* AKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUser.m; sourceTree = "<group>"; };
+		8439B3E51D0B474C00A0AB73 /* AKFriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendDetailViewController.h; sourceTree = "<group>"; };
+		8439B3E61D0B474C00A0AB73 /* AKFriendDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendDetailViewController.m; sourceTree = "<group>"; };
+		8439B3E71D0B474C00A0AB73 /* AKFriendDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKFriendDetailViewController.xib; sourceTree = "<group>"; };
+		8439B3E91D0B474C00A0AB73 /* AKFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendsViewController.h; sourceTree = "<group>"; };
+		8439B3EA1D0B474C00A0AB73 /* AKFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsViewController.m; sourceTree = "<group>"; };
+		8439B3EB1D0B474C00A0AB73 /* AKFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKFriendsViewController.xib; sourceTree = "<group>"; };
+		8439B3EE1D0B474C00A0AB73 /* AKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLoginView.h; sourceTree = "<group>"; };
+		8439B3EF1D0B474C00A0AB73 /* AKLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoginView.m; sourceTree = "<group>"; };
+		8439B3F01D0B474C00A0AB73 /* AKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLoginViewController.h; sourceTree = "<group>"; };
+		8439B3F11D0B474C00A0AB73 /* AKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoginViewController.m; sourceTree = "<group>"; };
+		8439B3F21D0B474C00A0AB73 /* AKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKLoginViewController.xib; sourceTree = "<group>"; };
+		8439B3F51D0B474C00A0AB73 /* AKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKAppDelegate.h; sourceTree = "<group>"; };
+		8439B3F61D0B474C00A0AB73 /* AKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKAppDelegate.m; sourceTree = "<group>"; };
+		8439B3F71D0B474C00A0AB73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8439B3F91D0B474C00A0AB73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8439B3FB1D0B474C00A0AB73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8439B3FC1D0B474C00A0AB73 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8439B3FD1D0B474C00A0AB73 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85ABAF5104C5E7C9B2F764FE /* Pods-AKFacebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.debug.xcconfig"; sourceTree = "<group>"; };
+		D80AF07FD4F53B9A26F9A9AF /* libPods-AKFacebook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AKFacebook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8439B3BC1D0B464E00A0AB73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0640F07C92049E9B5351EA /* libPods-AKFacebook.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		260FC1DBC6C9E701CEDEC43C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D80AF07FD4F53B9A26F9A9AF /* libPods-AKFacebook.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6222E32B67613D79BDE38A31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85ABAF5104C5E7C9B2F764FE /* Pods-AKFacebook.debug.xcconfig */,
+				79298EF1B753A59B5E794EA5 /* Pods-AKFacebook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8439B3B61D0B464E00A0AB73 = {
+			isa = PBXGroup;
+			children = (
+				8439B3D91D0B474C00A0AB73 /* AKFacebook */,
+				8439B3C01D0B464E00A0AB73 /* Products */,
+				6222E32B67613D79BDE38A31 /* Pods */,
+				260FC1DBC6C9E701CEDEC43C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8439B3C01D0B464E00A0AB73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3BF1D0B464E00A0AB73 /* AKFacebook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8439B3D91D0B474C00A0AB73 /* AKFacebook */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3DA1D0B474C00A0AB73 /* Source */,
+				8439B3F31D0B474C00A0AB73 /* SupportingFiles */,
+			);
+			path = AKFacebook;
+			sourceTree = "<group>";
+		};
+		8439B3DA1D0B474C00A0AB73 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3DB1D0B474C00A0AB73 /* Context */,
+				8439B3DF1D0B474C00A0AB73 /* Models */,
+				8439B3E31D0B474C00A0AB73 /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8439B3DB1D0B474C00A0AB73 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3DC1D0B474C00A0AB73 /* AKFriendsContext */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		8439B3DC1D0B474C00A0AB73 /* AKFriendsContext */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3DD1D0B474C00A0AB73 /* AKFriendsContext.h */,
+				8439B3DE1D0B474C00A0AB73 /* AKFriendsContext.m */,
+			);
+			path = AKFriendsContext;
+			sourceTree = "<group>";
+		};
+		8439B3DF1D0B474C00A0AB73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3E01D0B474C00A0AB73 /* AKUser */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8439B3E01D0B474C00A0AB73 /* AKUser */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3E11D0B474C00A0AB73 /* AKUser.h */,
+				8439B3E21D0B474C00A0AB73 /* AKUser.m */,
+			);
+			path = AKUser;
+			sourceTree = "<group>";
+		};
+		8439B3E31D0B474C00A0AB73 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3E41D0B474C00A0AB73 /* AKFriendsDetailViewController */,
+				8439B3E81D0B474C00A0AB73 /* AKFriendsViewController */,
+				8439B3EC1D0B474C00A0AB73 /* AKLoginViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8439B3E41D0B474C00A0AB73 /* AKFriendsDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3E51D0B474C00A0AB73 /* AKFriendDetailViewController.h */,
+				8439B3E61D0B474C00A0AB73 /* AKFriendDetailViewController.m */,
+				8439B3E71D0B474C00A0AB73 /* AKFriendDetailViewController.xib */,
+			);
+			path = AKFriendsDetailViewController;
+			sourceTree = "<group>";
+		};
+		8439B3E81D0B474C00A0AB73 /* AKFriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3E91D0B474C00A0AB73 /* AKFriendsViewController.h */,
+				8439B3EA1D0B474C00A0AB73 /* AKFriendsViewController.m */,
+				8439B3EB1D0B474C00A0AB73 /* AKFriendsViewController.xib */,
+			);
+			path = AKFriendsViewController;
+			sourceTree = "<group>";
+		};
+		8439B3EC1D0B474C00A0AB73 /* AKLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3ED1D0B474C00A0AB73 /* AKLoginView */,
+				8439B3F01D0B474C00A0AB73 /* AKLoginViewController.h */,
+				8439B3F11D0B474C00A0AB73 /* AKLoginViewController.m */,
+				8439B3F21D0B474C00A0AB73 /* AKLoginViewController.xib */,
+			);
+			path = AKLoginViewController;
+			sourceTree = "<group>";
+		};
+		8439B3ED1D0B474C00A0AB73 /* AKLoginView */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3EE1D0B474C00A0AB73 /* AKLoginView.h */,
+				8439B3EF1D0B474C00A0AB73 /* AKLoginView.m */,
+			);
+			path = AKLoginView;
+			sourceTree = "<group>";
+		};
+		8439B3F31D0B474C00A0AB73 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3F41D0B474C00A0AB73 /* AKAppDelegate */,
+				8439B3F71D0B474C00A0AB73 /* Assets.xcassets */,
+				8439B3F81D0B474C00A0AB73 /* LaunchScreen.storyboard */,
+				8439B3FA1D0B474C00A0AB73 /* Main.storyboard */,
+				8439B3FC1D0B474C00A0AB73 /* Info.plist */,
+				8439B3FD1D0B474C00A0AB73 /* main.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8439B3F41D0B474C00A0AB73 /* AKAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8439B3F51D0B474C00A0AB73 /* AKAppDelegate.h */,
+				8439B3F61D0B474C00A0AB73 /* AKAppDelegate.m */,
+			);
+			path = AKAppDelegate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8439B3BE1D0B464E00A0AB73 /* AKFacebook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8439B3D61D0B464F00A0AB73 /* Build configuration list for PBXNativeTarget "AKFacebook" */;
+			buildPhases = (
+				CDCB5FCF7D495B1786A8BC9E /* [CP] Check Pods Manifest.lock */,
+				8439B3BB1D0B464E00A0AB73 /* Sources */,
+				8439B3BC1D0B464E00A0AB73 /* Frameworks */,
+				8439B3BD1D0B464E00A0AB73 /* Resources */,
+				A9A23E1AD1711CD3DD1843E0 /* [CP] Embed Pods Frameworks */,
+				2B964E167968A8047881658A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AKFacebook;
+			productName = AKFacebook;
+			productReference = 8439B3BF1D0B464E00A0AB73 /* AKFacebook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8439B3B71D0B464E00A0AB73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Karpov Andrey";
+				TargetAttributes = {
+					8439B3BE1D0B464E00A0AB73 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8439B3BA1D0B464E00A0AB73 /* Build configuration list for PBXProject "AKFacebook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8439B3B61D0B464E00A0AB73;
+			productRefGroup = 8439B3C01D0B464E00A0AB73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8439B3BE1D0B464E00A0AB73 /* AKFacebook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8439B3BD1D0B464E00A0AB73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8439B4061D0B474C00A0AB73 /* AKLoginViewController.xib in Resources */,
+				8439B4031D0B474C00A0AB73 /* AKFriendsViewController.xib in Resources */,
+				8439B4081D0B474C00A0AB73 /* Assets.xcassets in Resources */,
+				8439B40A1D0B474C00A0AB73 /* Main.storyboard in Resources */,
+				8439B4091D0B474C00A0AB73 /* LaunchScreen.storyboard in Resources */,
+				8439B4011D0B474C00A0AB73 /* AKFriendDetailViewController.xib in Resources */,
+				8439B40B1D0B474C00A0AB73 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B964E167968A8047881658A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9A23E1AD1711CD3DD1843E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDCB5FCF7D495B1786A8BC9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8439B3BB1D0B464E00A0AB73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8439B4051D0B474C00A0AB73 /* AKLoginViewController.m in Sources */,
+				8439B3FF1D0B474C00A0AB73 /* AKUser.m in Sources */,
+				8439B3FE1D0B474C00A0AB73 /* AKFriendsContext.m in Sources */,
+				8439B4021D0B474C00A0AB73 /* AKFriendsViewController.m in Sources */,
+				8439B4041D0B474C00A0AB73 /* AKLoginView.m in Sources */,
+				8439B4071D0B474C00A0AB73 /* AKAppDelegate.m in Sources */,
+				8439B40C1D0B474C00A0AB73 /* main.m in Sources */,
+				8439B4001D0B474C00A0AB73 /* AKFriendDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8439B3F81D0B474C00A0AB73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8439B3F91D0B474C00A0AB73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8439B3FA1D0B474C00A0AB73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8439B3FB1D0B474C00A0AB73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8439B3D41D0B464F00A0AB73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8439B3D51D0B464F00A0AB73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8439B3D71D0B464F00A0AB73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85ABAF5104C5E7C9B2F764FE /* Pods-AKFacebook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AKFacebook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AK.AKFacebook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8439B3D81D0B464F00A0AB73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79298EF1B753A59B5E794EA5 /* Pods-AKFacebook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AKFacebook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AK.AKFacebook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8439B3BA1D0B464E00A0AB73 /* Build configuration list for PBXProject "AKFacebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8439B3D41D0B464F00A0AB73 /* Debug */,
+				8439B3D51D0B464F00A0AB73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8439B3D61D0B464F00A0AB73 /* Build configuration list for PBXNativeTarget "AKFacebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8439B3D71D0B464F00A0AB73 /* Debug */,
+				8439B3D81D0B464F00A0AB73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8439B3B71D0B464E00A0AB73 /* Project object */;
+}
