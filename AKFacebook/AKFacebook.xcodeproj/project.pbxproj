@@ -7,51 +7,152 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8439B3FE1D0B474C00A0AB73 /* AKFriendsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3DE1D0B474C00A0AB73 /* AKFriendsContext.m */; };
-		8439B3FF1D0B474C00A0AB73 /* AKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3E21D0B474C00A0AB73 /* AKUser.m */; };
-		8439B4001D0B474C00A0AB73 /* AKFriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3E61D0B474C00A0AB73 /* AKFriendDetailViewController.m */; };
-		8439B4011D0B474C00A0AB73 /* AKFriendDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3E71D0B474C00A0AB73 /* AKFriendDetailViewController.xib */; };
-		8439B4021D0B474C00A0AB73 /* AKFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3EA1D0B474C00A0AB73 /* AKFriendsViewController.m */; };
-		8439B4031D0B474C00A0AB73 /* AKFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3EB1D0B474C00A0AB73 /* AKFriendsViewController.xib */; };
-		8439B4041D0B474C00A0AB73 /* AKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3EF1D0B474C00A0AB73 /* AKLoginView.m */; };
-		8439B4051D0B474C00A0AB73 /* AKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3F11D0B474C00A0AB73 /* AKLoginViewController.m */; };
-		8439B4061D0B474C00A0AB73 /* AKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3F21D0B474C00A0AB73 /* AKLoginViewController.xib */; };
-		8439B4071D0B474C00A0AB73 /* AKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3F61D0B474C00A0AB73 /* AKAppDelegate.m */; };
-		8439B4081D0B474C00A0AB73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3F71D0B474C00A0AB73 /* Assets.xcassets */; };
-		8439B4091D0B474C00A0AB73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3F81D0B474C00A0AB73 /* LaunchScreen.storyboard */; };
-		8439B40A1D0B474C00A0AB73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3FA1D0B474C00A0AB73 /* Main.storyboard */; };
-		8439B40B1D0B474C00A0AB73 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8439B3FC1D0B474C00A0AB73 /* Info.plist */; };
-		8439B40C1D0B474C00A0AB73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B3FD1D0B474C00A0AB73 /* main.m */; };
-		8F0640F07C92049E9B5351EA /* libPods-AKFacebook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D80AF07FD4F53B9A26F9A9AF /* libPods-AKFacebook.a */; };
+		6DB752C4AAF29BB42A7AF9CC /* libPods-AKFacebook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 380FF09F7B0D06B1744C1FB6 /* libPods-AKFacebook.a */; };
+		84C80D2B1D0B535900A4365F /* AKDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CBB1D0B535900A4365F /* AKDispatch.m */; };
+		84C80D2C1D0B535900A4365F /* AKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CBE1D0B535900A4365F /* AKObserver.m */; };
+		84C80D2D1D0B535900A4365F /* AKObserverArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CC21D0B535900A4365F /* AKObserverArray.m */; };
+		84C80D2E1D0B535900A4365F /* AKObserverDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CC51D0B535900A4365F /* AKObserverDictionary.m */; };
+		84C80D2F1D0B535900A4365F /* AKObserverObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CC81D0B535900A4365F /* AKObserverObject.m */; };
+		84C80D301D0B535900A4365F /* CGGeometry+AKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CCC1D0B535900A4365F /* CGGeometry+AKCategory.m */; };
+		84C80D311D0B535900A4365F /* NSBundle+AKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CCF1D0B535900A4365F /* NSBundle+AKCategory.m */; };
+		84C80D321D0B535900A4365F /* NSFileManager+AKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CD21D0B535900A4365F /* NSFileManager+AKCategory.m */; };
+		84C80D331D0B535900A4365F /* NSObject+AKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CD51D0B535900A4365F /* NSObject+AKExtensions.m */; };
+		84C80D341D0B535900A4365F /* NSString+AKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CD81D0B535900A4365F /* NSString+AKExtensions.m */; };
+		84C80D351D0B535900A4365F /* UINib+AKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CDB1D0B535900A4365F /* UINib+AKCategory.m */; };
+		84C80D361D0B535900A4365F /* UITableView+AKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CDE1D0B535900A4365F /* UITableView+AKCategory.m */; };
+		84C80D371D0B535900A4365F /* UIViewController+AKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CE11D0B535900A4365F /* UIViewController+AKCategory.m */; };
+		84C80D381D0B535900A4365F /* UIWindow+AKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CE41D0B535900A4365F /* UIWindow+AKCategory.m */; };
+		84C80D391D0B535900A4365F /* AKArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CEA1D0B535900A4365F /* AKArrayModel.m */; };
+		84C80D3A1D0B535900A4365F /* AKArrayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CED1D0B535900A4365F /* AKArrayManager.m */; };
+		84C80D3B1D0B535900A4365F /* AKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CF01D0B535900A4365F /* AKModel.m */; };
+		84C80D3C1D0B535900A4365F /* AKSharedCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CF31D0B535900A4365F /* AKSharedCacheModel.m */; };
+		84C80D3D1D0B535900A4365F /* AKStateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CF61D0B535900A4365F /* AKStateModel.m */; };
+		84C80D3E1D0B535900A4365F /* AKStringModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CF91D0B535900A4365F /* AKStringModel.m */; };
+		84C80D3F1D0B535900A4365F /* AKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80CFD1D0B535900A4365F /* AKLoadingView.m */; };
+		84C80D401D0B535900A4365F /* AKLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C80CFE1D0B535900A4365F /* AKLoadingView.xib */; };
+		84C80D411D0B535900A4365F /* AKViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D001D0B535900A4365F /* AKViewModel.m */; };
+		84C80D421D0B535900A4365F /* AKImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D051D0B535900A4365F /* AKImageModel.m */; };
+		84C80D431D0B535900A4365F /* AKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D071D0B535900A4365F /* AKImageView.m */; };
+		84C80D441D0B535900A4365F /* AKUserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D0A1D0B535900A4365F /* AKUserViewCell.m */; };
+		84C80D451D0B535900A4365F /* AKUserViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D0B1D0B535900A4365F /* AKUserViewCell.xib */; };
+		84C80D461D0B535900A4365F /* AKUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D0F1D0B535900A4365F /* AKUserView.m */; };
+		84C80D491D0B535900A4365F /* AKUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D151D0B535900A4365F /* AKUserViewController.m */; };
+		84C80D4A1D0B535900A4365F /* AKUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D161D0B535900A4365F /* AKUserViewController.xib */; };
+		84C80D5B1D0B53AD00A4365F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D541D0B53AD00A4365F /* Assets.xcassets */; };
+		84C80D5C1D0B53AD00A4365F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D551D0B53AD00A4365F /* LaunchScreen.storyboard */; };
+		84C80D5D1D0B53AD00A4365F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D571D0B53AD00A4365F /* Main.storyboard */; };
+		84C80D5F1D0B53AD00A4365F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D5A1D0B53AD00A4365F /* main.m */; };
+		84C80D6F1D0B58FB00A4365F /* AKAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D671D0B58FB00A4365F /* AKAlphabet.m */; };
+		84C80D701D0B58FB00A4365F /* AKClusterAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D6A1D0B58FB00A4365F /* AKClusterAlphabet.m */; };
+		84C80D711D0B58FB00A4365F /* AKRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D6C1D0B58FB00A4365F /* AKRangeAlphabet.m */; };
+		84C80D721D0B58FB00A4365F /* AKStringAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D6E1D0B58FB00A4365F /* AKStringAlphabet.m */; };
+		84C80D761D0B594400A4365F /* AKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D751D0B594400A4365F /* AKAppDelegate.m */; };
+		84C80D901D0B59AC00A4365F /* AKFriendsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D7B1D0B59AC00A4365F /* AKFriendsContext.m */; };
+		84C80D911D0B59AC00A4365F /* AKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D7F1D0B59AC00A4365F /* AKUser.m */; };
+		84C80D921D0B59AC00A4365F /* AKFriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D831D0B59AC00A4365F /* AKFriendDetailViewController.m */; };
+		84C80D931D0B59AC00A4365F /* AKFriendDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D841D0B59AC00A4365F /* AKFriendDetailViewController.xib */; };
+		84C80D941D0B59AC00A4365F /* AKFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D871D0B59AC00A4365F /* AKFriendsViewController.m */; };
+		84C80D951D0B59AC00A4365F /* AKFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D881D0B59AC00A4365F /* AKFriendsViewController.xib */; };
+		84C80D961D0B59AC00A4365F /* AKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D8C1D0B59AC00A4365F /* AKLoginView.m */; };
+		84C80D971D0B59AC00A4365F /* AKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D8E1D0B59AC00A4365F /* AKLoginViewController.m */; };
+		84C80D981D0B59AC00A4365F /* AKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D8F1D0B59AC00A4365F /* AKLoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		79298EF1B753A59B5E794EA5 /* Pods-AKFacebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.release.xcconfig"; sourceTree = "<group>"; };
-		8439B3BF1D0B464E00A0AB73 /* AKFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8439B3DD1D0B474C00A0AB73 /* AKFriendsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendsContext.h; sourceTree = "<group>"; };
-		8439B3DE1D0B474C00A0AB73 /* AKFriendsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsContext.m; sourceTree = "<group>"; };
-		8439B3E11D0B474C00A0AB73 /* AKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUser.h; sourceTree = "<group>"; };
-		8439B3E21D0B474C00A0AB73 /* AKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUser.m; sourceTree = "<group>"; };
-		8439B3E51D0B474C00A0AB73 /* AKFriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendDetailViewController.h; sourceTree = "<group>"; };
-		8439B3E61D0B474C00A0AB73 /* AKFriendDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendDetailViewController.m; sourceTree = "<group>"; };
-		8439B3E71D0B474C00A0AB73 /* AKFriendDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKFriendDetailViewController.xib; sourceTree = "<group>"; };
-		8439B3E91D0B474C00A0AB73 /* AKFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendsViewController.h; sourceTree = "<group>"; };
-		8439B3EA1D0B474C00A0AB73 /* AKFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsViewController.m; sourceTree = "<group>"; };
-		8439B3EB1D0B474C00A0AB73 /* AKFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKFriendsViewController.xib; sourceTree = "<group>"; };
-		8439B3EE1D0B474C00A0AB73 /* AKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLoginView.h; sourceTree = "<group>"; };
-		8439B3EF1D0B474C00A0AB73 /* AKLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoginView.m; sourceTree = "<group>"; };
-		8439B3F01D0B474C00A0AB73 /* AKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLoginViewController.h; sourceTree = "<group>"; };
-		8439B3F11D0B474C00A0AB73 /* AKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoginViewController.m; sourceTree = "<group>"; };
-		8439B3F21D0B474C00A0AB73 /* AKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKLoginViewController.xib; sourceTree = "<group>"; };
-		8439B3F51D0B474C00A0AB73 /* AKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKAppDelegate.h; sourceTree = "<group>"; };
-		8439B3F61D0B474C00A0AB73 /* AKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKAppDelegate.m; sourceTree = "<group>"; };
-		8439B3F71D0B474C00A0AB73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8439B3F91D0B474C00A0AB73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8439B3FB1D0B474C00A0AB73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8439B3FC1D0B474C00A0AB73 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8439B3FD1D0B474C00A0AB73 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		85ABAF5104C5E7C9B2F764FE /* Pods-AKFacebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.debug.xcconfig"; sourceTree = "<group>"; };
-		D80AF07FD4F53B9A26F9A9AF /* libPods-AKFacebook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AKFacebook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D0A0CFFCF56A803D0355A85 /* Pods-AKFacebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.debug.xcconfig"; sourceTree = "<group>"; };
+		380FF09F7B0D06B1744C1FB6 /* libPods-AKFacebook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AKFacebook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C80CBA1D0B535900A4365F /* AKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKDispatch.h; sourceTree = "<group>"; };
+		84C80CBB1D0B535900A4365F /* AKDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKDispatch.m; sourceTree = "<group>"; };
+		84C80CBD1D0B535900A4365F /* AKObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKObserver.h; sourceTree = "<group>"; };
+		84C80CBE1D0B535900A4365F /* AKObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKObserver.m; sourceTree = "<group>"; };
+		84C80CC11D0B535900A4365F /* AKObserverArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKObserverArray.h; sourceTree = "<group>"; };
+		84C80CC21D0B535900A4365F /* AKObserverArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKObserverArray.m; sourceTree = "<group>"; };
+		84C80CC41D0B535900A4365F /* AKObserverDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKObserverDictionary.h; sourceTree = "<group>"; };
+		84C80CC51D0B535900A4365F /* AKObserverDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKObserverDictionary.m; sourceTree = "<group>"; };
+		84C80CC71D0B535900A4365F /* AKObserverObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKObserverObject.h; sourceTree = "<group>"; };
+		84C80CC81D0B535900A4365F /* AKObserverObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKObserverObject.m; sourceTree = "<group>"; };
+		84C80CCB1D0B535900A4365F /* CGGeometry+AKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+AKCategory.h"; sourceTree = "<group>"; };
+		84C80CCC1D0B535900A4365F /* CGGeometry+AKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+AKCategory.m"; sourceTree = "<group>"; };
+		84C80CCE1D0B535900A4365F /* NSBundle+AKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+AKCategory.h"; sourceTree = "<group>"; };
+		84C80CCF1D0B535900A4365F /* NSBundle+AKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+AKCategory.m"; sourceTree = "<group>"; };
+		84C80CD11D0B535900A4365F /* NSFileManager+AKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+AKCategory.h"; sourceTree = "<group>"; };
+		84C80CD21D0B535900A4365F /* NSFileManager+AKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+AKCategory.m"; sourceTree = "<group>"; };
+		84C80CD41D0B535900A4365F /* NSObject+AKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AKExtensions.h"; sourceTree = "<group>"; };
+		84C80CD51D0B535900A4365F /* NSObject+AKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AKExtensions.m"; sourceTree = "<group>"; };
+		84C80CD71D0B535900A4365F /* NSString+AKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AKExtensions.h"; sourceTree = "<group>"; };
+		84C80CD81D0B535900A4365F /* NSString+AKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AKExtensions.m"; sourceTree = "<group>"; };
+		84C80CDA1D0B535900A4365F /* UINib+AKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINib+AKCategory.h"; sourceTree = "<group>"; };
+		84C80CDB1D0B535900A4365F /* UINib+AKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINib+AKCategory.m"; sourceTree = "<group>"; };
+		84C80CDD1D0B535900A4365F /* UITableView+AKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AKCategory.h"; sourceTree = "<group>"; };
+		84C80CDE1D0B535900A4365F /* UITableView+AKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AKCategory.m"; sourceTree = "<group>"; };
+		84C80CE01D0B535900A4365F /* UIViewController+AKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AKCategory.h"; sourceTree = "<group>"; };
+		84C80CE11D0B535900A4365F /* UIViewController+AKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AKCategory.m"; sourceTree = "<group>"; };
+		84C80CE31D0B535900A4365F /* UIWindow+AKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AKCategory.h"; sourceTree = "<group>"; };
+		84C80CE41D0B535900A4365F /* UIWindow+AKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AKCategory.m"; sourceTree = "<group>"; };
+		84C80CE61D0B535900A4365F /* AKMacroIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMacroIOS.h; sourceTree = "<group>"; };
+		84C80CE91D0B535900A4365F /* AKArrayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKArrayModel.h; sourceTree = "<group>"; };
+		84C80CEA1D0B535900A4365F /* AKArrayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKArrayModel.m; sourceTree = "<group>"; };
+		84C80CEC1D0B535900A4365F /* AKArrayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKArrayManager.h; sourceTree = "<group>"; };
+		84C80CED1D0B535900A4365F /* AKArrayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKArrayManager.m; sourceTree = "<group>"; };
+		84C80CEF1D0B535900A4365F /* AKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKModel.h; sourceTree = "<group>"; };
+		84C80CF01D0B535900A4365F /* AKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKModel.m; sourceTree = "<group>"; };
+		84C80CF21D0B535900A4365F /* AKSharedCacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKSharedCacheModel.h; sourceTree = "<group>"; };
+		84C80CF31D0B535900A4365F /* AKSharedCacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKSharedCacheModel.m; sourceTree = "<group>"; };
+		84C80CF51D0B535900A4365F /* AKStateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStateModel.h; sourceTree = "<group>"; };
+		84C80CF61D0B535900A4365F /* AKStateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStateModel.m; sourceTree = "<group>"; };
+		84C80CF81D0B535900A4365F /* AKStringModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStringModel.h; sourceTree = "<group>"; };
+		84C80CF91D0B535900A4365F /* AKStringModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStringModel.m; sourceTree = "<group>"; };
+		84C80CFC1D0B535900A4365F /* AKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLoadingView.h; sourceTree = "<group>"; };
+		84C80CFD1D0B535900A4365F /* AKLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoadingView.m; sourceTree = "<group>"; };
+		84C80CFE1D0B535900A4365F /* AKLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKLoadingView.xib; sourceTree = "<group>"; };
+		84C80CFF1D0B535900A4365F /* AKViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKViewModel.h; sourceTree = "<group>"; };
+		84C80D001D0B535900A4365F /* AKViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKViewModel.m; sourceTree = "<group>"; };
+		84C80D041D0B535900A4365F /* AKImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKImageModel.h; sourceTree = "<group>"; };
+		84C80D051D0B535900A4365F /* AKImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKImageModel.m; sourceTree = "<group>"; };
+		84C80D061D0B535900A4365F /* AKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKImageView.h; sourceTree = "<group>"; };
+		84C80D071D0B535900A4365F /* AKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKImageView.m; sourceTree = "<group>"; };
+		84C80D091D0B535900A4365F /* AKUserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUserViewCell.h; sourceTree = "<group>"; };
+		84C80D0A1D0B535900A4365F /* AKUserViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUserViewCell.m; sourceTree = "<group>"; };
+		84C80D0B1D0B535900A4365F /* AKUserViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKUserViewCell.xib; sourceTree = "<group>"; };
+		84C80D0E1D0B535900A4365F /* AKUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUserView.h; sourceTree = "<group>"; };
+		84C80D0F1D0B535900A4365F /* AKUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUserView.m; sourceTree = "<group>"; };
+		84C80D141D0B535900A4365F /* AKUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUserViewController.h; sourceTree = "<group>"; };
+		84C80D151D0B535900A4365F /* AKUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUserViewController.m; sourceTree = "<group>"; };
+		84C80D161D0B535900A4365F /* AKUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKUserViewController.xib; sourceTree = "<group>"; };
+		84C80D541D0B53AD00A4365F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84C80D561D0B53AD00A4365F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84C80D581D0B53AD00A4365F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84C80D591D0B53AD00A4365F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C80D5A1D0B53AD00A4365F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84C80D631D0B57B500A4365F /* FacebookProjectPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookProjectPrefix.pch; sourceTree = "<group>"; };
+		84C80D641D0B589100A4365F /* AKMacroObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMacroObjC.h; sourceTree = "<group>"; };
+		84C80D661D0B58FB00A4365F /* AKAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKAlphabet.h; sourceTree = "<group>"; };
+		84C80D671D0B58FB00A4365F /* AKAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKAlphabet.m; sourceTree = "<group>"; };
+		84C80D691D0B58FB00A4365F /* AKClusterAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKClusterAlphabet.h; sourceTree = "<group>"; };
+		84C80D6A1D0B58FB00A4365F /* AKClusterAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKClusterAlphabet.m; sourceTree = "<group>"; };
+		84C80D6B1D0B58FB00A4365F /* AKRangeAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKRangeAlphabet.h; sourceTree = "<group>"; };
+		84C80D6C1D0B58FB00A4365F /* AKRangeAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKRangeAlphabet.m; sourceTree = "<group>"; };
+		84C80D6D1D0B58FB00A4365F /* AKStringAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStringAlphabet.h; sourceTree = "<group>"; };
+		84C80D6E1D0B58FB00A4365F /* AKStringAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStringAlphabet.m; sourceTree = "<group>"; };
+		84C80D741D0B594400A4365F /* AKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKAppDelegate.h; sourceTree = "<group>"; };
+		84C80D751D0B594400A4365F /* AKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKAppDelegate.m; sourceTree = "<group>"; };
+		84C80D7A1D0B59AC00A4365F /* AKFriendsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendsContext.h; sourceTree = "<group>"; };
+		84C80D7B1D0B59AC00A4365F /* AKFriendsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsContext.m; sourceTree = "<group>"; };
+		84C80D7E1D0B59AC00A4365F /* AKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUser.h; sourceTree = "<group>"; };
+		84C80D7F1D0B59AC00A4365F /* AKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUser.m; sourceTree = "<group>"; };
+		84C80D821D0B59AC00A4365F /* AKFriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendDetailViewController.h; sourceTree = "<group>"; };
+		84C80D831D0B59AC00A4365F /* AKFriendDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendDetailViewController.m; sourceTree = "<group>"; };
+		84C80D841D0B59AC00A4365F /* AKFriendDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKFriendDetailViewController.xib; sourceTree = "<group>"; };
+		84C80D861D0B59AC00A4365F /* AKFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendsViewController.h; sourceTree = "<group>"; };
+		84C80D871D0B59AC00A4365F /* AKFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsViewController.m; sourceTree = "<group>"; };
+		84C80D881D0B59AC00A4365F /* AKFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKFriendsViewController.xib; sourceTree = "<group>"; };
+		84C80D8B1D0B59AC00A4365F /* AKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLoginView.h; sourceTree = "<group>"; };
+		84C80D8C1D0B59AC00A4365F /* AKLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoginView.m; sourceTree = "<group>"; };
+		84C80D8D1D0B59AC00A4365F /* AKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLoginViewController.h; sourceTree = "<group>"; };
+		84C80D8E1D0B59AC00A4365F /* AKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoginViewController.m; sourceTree = "<group>"; };
+		84C80D8F1D0B59AC00A4365F /* AKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKLoginViewController.xib; sourceTree = "<group>"; };
+		84CCCF4D1D0B5482001A10A7 /* AKFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D64EE2CAA465223CE802759 /* Pods-AKFacebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,171 +160,511 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F0640F07C92049E9B5351EA /* libPods-AKFacebook.a in Frameworks */,
+				6DB752C4AAF29BB42A7AF9CC /* libPods-AKFacebook.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		260FC1DBC6C9E701CEDEC43C /* Frameworks */ = {
+		0E3D819031EDD5E31BA2C0C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D80AF07FD4F53B9A26F9A9AF /* libPods-AKFacebook.a */,
+				380FF09F7B0D06B1744C1FB6 /* libPods-AKFacebook.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6222E32B67613D79BDE38A31 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				85ABAF5104C5E7C9B2F764FE /* Pods-AKFacebook.debug.xcconfig */,
-				79298EF1B753A59B5E794EA5 /* Pods-AKFacebook.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		8439B3B61D0B464E00A0AB73 = {
 			isa = PBXGroup;
 			children = (
-				8439B3D91D0B474C00A0AB73 /* AKFacebook */,
-				8439B3C01D0B464E00A0AB73 /* Products */,
-				6222E32B67613D79BDE38A31 /* Pods */,
-				260FC1DBC6C9E701CEDEC43C /* Frameworks */,
+				84C80CB71D0B535900A4365F /* AKFacebook */,
+				D793D474A56B7CAAB0A68E98 /* Pods */,
+				0E3D819031EDD5E31BA2C0C1 /* Frameworks */,
+				84CCCF4D1D0B5482001A10A7 /* AKFacebook.app */,
 			);
 			sourceTree = "<group>";
 		};
-		8439B3C01D0B464E00A0AB73 /* Products */ = {
+		84C80CB71D0B535900A4365F /* AKFacebook */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3BF1D0B464E00A0AB73 /* AKFacebook.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8439B3D91D0B474C00A0AB73 /* AKFacebook */ = {
-			isa = PBXGroup;
-			children = (
-				8439B3DA1D0B474C00A0AB73 /* Source */,
-				8439B3F31D0B474C00A0AB73 /* SupportingFiles */,
+				84C80D771D0B59AC00A4365F /* Source */,
+				84C80CB81D0B535900A4365F /* Library */,
+				84C80D521D0B53AD00A4365F /* SupportingFiles */,
 			);
 			path = AKFacebook;
 			sourceTree = "<group>";
 		};
-		8439B3DA1D0B474C00A0AB73 /* Source */ = {
+		84C80CB81D0B535900A4365F /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3DB1D0B474C00A0AB73 /* Context */,
-				8439B3DF1D0B474C00A0AB73 /* Models */,
-				8439B3E31D0B474C00A0AB73 /* UI */,
+				84C80D651D0B58FB00A4365F /* AKAlphabet */,
+				84C80CB91D0B535900A4365F /* AKDispatch */,
+				84C80CBC1D0B535900A4365F /* AKObserver */,
+				84C80CC91D0B535900A4365F /* Extentions */,
+				84C80CE51D0B535900A4365F /* Macro */,
+				84C80CE71D0B535900A4365F /* Models */,
+				84C80D011D0B535900A4365F /* UI */,
 			);
-			path = Source;
+			path = Library;
 			sourceTree = "<group>";
 		};
-		8439B3DB1D0B474C00A0AB73 /* Context */ = {
+		84C80CB91D0B535900A4365F /* AKDispatch */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3DC1D0B474C00A0AB73 /* AKFriendsContext */,
+				84C80CBA1D0B535900A4365F /* AKDispatch.h */,
+				84C80CBB1D0B535900A4365F /* AKDispatch.m */,
 			);
-			path = Context;
+			path = AKDispatch;
 			sourceTree = "<group>";
 		};
-		8439B3DC1D0B474C00A0AB73 /* AKFriendsContext */ = {
+		84C80CBC1D0B535900A4365F /* AKObserver */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3DD1D0B474C00A0AB73 /* AKFriendsContext.h */,
-				8439B3DE1D0B474C00A0AB73 /* AKFriendsContext.m */,
+				84C80CBD1D0B535900A4365F /* AKObserver.h */,
+				84C80CBE1D0B535900A4365F /* AKObserver.m */,
+				84C80CBF1D0B535900A4365F /* Private */,
 			);
-			path = AKFriendsContext;
+			path = AKObserver;
 			sourceTree = "<group>";
 		};
-		8439B3DF1D0B474C00A0AB73 /* Models */ = {
+		84C80CBF1D0B535900A4365F /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3E01D0B474C00A0AB73 /* AKUser */,
+				84C80CC01D0B535900A4365F /* AKObserverArray */,
+				84C80CC31D0B535900A4365F /* AKObserverDictionary */,
+				84C80CC61D0B535900A4365F /* AKObserverObject */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		84C80CC01D0B535900A4365F /* AKObserverArray */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CC11D0B535900A4365F /* AKObserverArray.h */,
+				84C80CC21D0B535900A4365F /* AKObserverArray.m */,
+			);
+			path = AKObserverArray;
+			sourceTree = "<group>";
+		};
+		84C80CC31D0B535900A4365F /* AKObserverDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CC41D0B535900A4365F /* AKObserverDictionary.h */,
+				84C80CC51D0B535900A4365F /* AKObserverDictionary.m */,
+			);
+			path = AKObserverDictionary;
+			sourceTree = "<group>";
+		};
+		84C80CC61D0B535900A4365F /* AKObserverObject */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CC71D0B535900A4365F /* AKObserverObject.h */,
+				84C80CC81D0B535900A4365F /* AKObserverObject.m */,
+			);
+			path = AKObserverObject;
+			sourceTree = "<group>";
+		};
+		84C80CC91D0B535900A4365F /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CCA1D0B535900A4365F /* CGGeometry+AKCategory */,
+				84C80CCD1D0B535900A4365F /* NSBundle+AKCategory */,
+				84C80CD01D0B535900A4365F /* NSFileManager+AKCategory */,
+				84C80CD31D0B535900A4365F /* NSObject+AKExtensions */,
+				84C80CD61D0B535900A4365F /* NSString+AKExtensions */,
+				84C80CD91D0B535900A4365F /* UINib+AKCategory */,
+				84C80CDC1D0B535900A4365F /* UITabelView+AKCategory */,
+				84C80CDF1D0B535900A4365F /* UIViewController+AKCategory */,
+				84C80CE21D0B535900A4365F /* UIWindow+AKCategory */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		84C80CCA1D0B535900A4365F /* CGGeometry+AKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CCB1D0B535900A4365F /* CGGeometry+AKCategory.h */,
+				84C80CCC1D0B535900A4365F /* CGGeometry+AKCategory.m */,
+			);
+			path = "CGGeometry+AKCategory";
+			sourceTree = "<group>";
+		};
+		84C80CCD1D0B535900A4365F /* NSBundle+AKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CCE1D0B535900A4365F /* NSBundle+AKCategory.h */,
+				84C80CCF1D0B535900A4365F /* NSBundle+AKCategory.m */,
+			);
+			path = "NSBundle+AKCategory";
+			sourceTree = "<group>";
+		};
+		84C80CD01D0B535900A4365F /* NSFileManager+AKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CD11D0B535900A4365F /* NSFileManager+AKCategory.h */,
+				84C80CD21D0B535900A4365F /* NSFileManager+AKCategory.m */,
+			);
+			path = "NSFileManager+AKCategory";
+			sourceTree = "<group>";
+		};
+		84C80CD31D0B535900A4365F /* NSObject+AKExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CD41D0B535900A4365F /* NSObject+AKExtensions.h */,
+				84C80CD51D0B535900A4365F /* NSObject+AKExtensions.m */,
+			);
+			path = "NSObject+AKExtensions";
+			sourceTree = "<group>";
+		};
+		84C80CD61D0B535900A4365F /* NSString+AKExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CD71D0B535900A4365F /* NSString+AKExtensions.h */,
+				84C80CD81D0B535900A4365F /* NSString+AKExtensions.m */,
+			);
+			path = "NSString+AKExtensions";
+			sourceTree = "<group>";
+		};
+		84C80CD91D0B535900A4365F /* UINib+AKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CDA1D0B535900A4365F /* UINib+AKCategory.h */,
+				84C80CDB1D0B535900A4365F /* UINib+AKCategory.m */,
+			);
+			path = "UINib+AKCategory";
+			sourceTree = "<group>";
+		};
+		84C80CDC1D0B535900A4365F /* UITabelView+AKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CDD1D0B535900A4365F /* UITableView+AKCategory.h */,
+				84C80CDE1D0B535900A4365F /* UITableView+AKCategory.m */,
+			);
+			path = "UITabelView+AKCategory";
+			sourceTree = "<group>";
+		};
+		84C80CDF1D0B535900A4365F /* UIViewController+AKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CE01D0B535900A4365F /* UIViewController+AKCategory.h */,
+				84C80CE11D0B535900A4365F /* UIViewController+AKCategory.m */,
+			);
+			path = "UIViewController+AKCategory";
+			sourceTree = "<group>";
+		};
+		84C80CE21D0B535900A4365F /* UIWindow+AKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CE31D0B535900A4365F /* UIWindow+AKCategory.h */,
+				84C80CE41D0B535900A4365F /* UIWindow+AKCategory.m */,
+			);
+			path = "UIWindow+AKCategory";
+			sourceTree = "<group>";
+		};
+		84C80CE51D0B535900A4365F /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D641D0B589100A4365F /* AKMacroObjC.h */,
+				84C80CE61D0B535900A4365F /* AKMacroIOS.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		84C80CE71D0B535900A4365F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CE81D0B535900A4365F /* AKArrayModel */,
+				84C80CEE1D0B535900A4365F /* AKModel */,
+				84C80CF11D0B535900A4365F /* AKSharedCacheModel */,
+				84C80CF41D0B535900A4365F /* AKStateModel */,
+				84C80CF71D0B535900A4365F /* AKStringModel */,
+				84C80CFA1D0B535900A4365F /* AKViewModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8439B3E01D0B474C00A0AB73 /* AKUser */ = {
+		84C80CE81D0B535900A4365F /* AKArrayModel */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3E11D0B474C00A0AB73 /* AKUser.h */,
-				8439B3E21D0B474C00A0AB73 /* AKUser.m */,
+				84C80CE91D0B535900A4365F /* AKArrayModel.h */,
+				84C80CEA1D0B535900A4365F /* AKArrayModel.m */,
+				84C80CEB1D0B535900A4365F /* AKArrayModelManager */,
 			);
-			path = AKUser;
+			path = AKArrayModel;
 			sourceTree = "<group>";
 		};
-		8439B3E31D0B474C00A0AB73 /* UI */ = {
+		84C80CEB1D0B535900A4365F /* AKArrayModelManager */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3E41D0B474C00A0AB73 /* AKFriendsDetailViewController */,
-				8439B3E81D0B474C00A0AB73 /* AKFriendsViewController */,
-				8439B3EC1D0B474C00A0AB73 /* AKLoginViewController */,
+				84C80CEC1D0B535900A4365F /* AKArrayManager.h */,
+				84C80CED1D0B535900A4365F /* AKArrayManager.m */,
+			);
+			path = AKArrayModelManager;
+			sourceTree = "<group>";
+		};
+		84C80CEE1D0B535900A4365F /* AKModel */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CEF1D0B535900A4365F /* AKModel.h */,
+				84C80CF01D0B535900A4365F /* AKModel.m */,
+			);
+			path = AKModel;
+			sourceTree = "<group>";
+		};
+		84C80CF11D0B535900A4365F /* AKSharedCacheModel */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CF21D0B535900A4365F /* AKSharedCacheModel.h */,
+				84C80CF31D0B535900A4365F /* AKSharedCacheModel.m */,
+			);
+			path = AKSharedCacheModel;
+			sourceTree = "<group>";
+		};
+		84C80CF41D0B535900A4365F /* AKStateModel */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CF51D0B535900A4365F /* AKStateModel.h */,
+				84C80CF61D0B535900A4365F /* AKStateModel.m */,
+			);
+			path = AKStateModel;
+			sourceTree = "<group>";
+		};
+		84C80CF71D0B535900A4365F /* AKStringModel */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CF81D0B535900A4365F /* AKStringModel.h */,
+				84C80CF91D0B535900A4365F /* AKStringModel.m */,
+			);
+			path = AKStringModel;
+			sourceTree = "<group>";
+		};
+		84C80CFA1D0B535900A4365F /* AKViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CFB1D0B535900A4365F /* AKLoadingView */,
+				84C80CFF1D0B535900A4365F /* AKViewModel.h */,
+				84C80D001D0B535900A4365F /* AKViewModel.m */,
+			);
+			path = AKViewModel;
+			sourceTree = "<group>";
+		};
+		84C80CFB1D0B535900A4365F /* AKLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				84C80CFC1D0B535900A4365F /* AKLoadingView.h */,
+				84C80CFD1D0B535900A4365F /* AKLoadingView.m */,
+				84C80CFE1D0B535900A4365F /* AKLoadingView.xib */,
+			);
+			path = AKLoadingView;
+			sourceTree = "<group>";
+		};
+		84C80D011D0B535900A4365F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D021D0B535900A4365F /* AKImageView */,
+				84C80D081D0B535900A4365F /* AKUserViewCell */,
+				84C80D0C1D0B535900A4365F /* AKUserViewController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		8439B3E41D0B474C00A0AB73 /* AKFriendsDetailViewController */ = {
+		84C80D021D0B535900A4365F /* AKImageView */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3E51D0B474C00A0AB73 /* AKFriendDetailViewController.h */,
-				8439B3E61D0B474C00A0AB73 /* AKFriendDetailViewController.m */,
-				8439B3E71D0B474C00A0AB73 /* AKFriendDetailViewController.xib */,
+				84C80D031D0B535900A4365F /* AKImageModel */,
+				84C80D061D0B535900A4365F /* AKImageView.h */,
+				84C80D071D0B535900A4365F /* AKImageView.m */,
 			);
-			path = AKFriendsDetailViewController;
+			path = AKImageView;
 			sourceTree = "<group>";
 		};
-		8439B3E81D0B474C00A0AB73 /* AKFriendsViewController */ = {
+		84C80D031D0B535900A4365F /* AKImageModel */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3E91D0B474C00A0AB73 /* AKFriendsViewController.h */,
-				8439B3EA1D0B474C00A0AB73 /* AKFriendsViewController.m */,
-				8439B3EB1D0B474C00A0AB73 /* AKFriendsViewController.xib */,
+				84C80D041D0B535900A4365F /* AKImageModel.h */,
+				84C80D051D0B535900A4365F /* AKImageModel.m */,
 			);
-			path = AKFriendsViewController;
+			path = AKImageModel;
 			sourceTree = "<group>";
 		};
-		8439B3EC1D0B474C00A0AB73 /* AKLoginViewController */ = {
+		84C80D081D0B535900A4365F /* AKUserViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3ED1D0B474C00A0AB73 /* AKLoginView */,
-				8439B3F01D0B474C00A0AB73 /* AKLoginViewController.h */,
-				8439B3F11D0B474C00A0AB73 /* AKLoginViewController.m */,
-				8439B3F21D0B474C00A0AB73 /* AKLoginViewController.xib */,
+				84C80D091D0B535900A4365F /* AKUserViewCell.h */,
+				84C80D0A1D0B535900A4365F /* AKUserViewCell.m */,
+				84C80D0B1D0B535900A4365F /* AKUserViewCell.xib */,
 			);
-			path = AKLoginViewController;
+			path = AKUserViewCell;
 			sourceTree = "<group>";
 		};
-		8439B3ED1D0B474C00A0AB73 /* AKLoginView */ = {
+		84C80D0C1D0B535900A4365F /* AKUserViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3EE1D0B474C00A0AB73 /* AKLoginView.h */,
-				8439B3EF1D0B474C00A0AB73 /* AKLoginView.m */,
+				84C80D0D1D0B535900A4365F /* AKUserView */,
+				84C80D141D0B535900A4365F /* AKUserViewController.h */,
+				84C80D151D0B535900A4365F /* AKUserViewController.m */,
+				84C80D161D0B535900A4365F /* AKUserViewController.xib */,
 			);
-			path = AKLoginView;
+			path = AKUserViewController;
 			sourceTree = "<group>";
 		};
-		8439B3F31D0B474C00A0AB73 /* SupportingFiles */ = {
+		84C80D0D1D0B535900A4365F /* AKUserView */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3F41D0B474C00A0AB73 /* AKAppDelegate */,
-				8439B3F71D0B474C00A0AB73 /* Assets.xcassets */,
-				8439B3F81D0B474C00A0AB73 /* LaunchScreen.storyboard */,
-				8439B3FA1D0B474C00A0AB73 /* Main.storyboard */,
-				8439B3FC1D0B474C00A0AB73 /* Info.plist */,
-				8439B3FD1D0B474C00A0AB73 /* main.m */,
+				84C80D0E1D0B535900A4365F /* AKUserView.h */,
+				84C80D0F1D0B535900A4365F /* AKUserView.m */,
+			);
+			path = AKUserView;
+			sourceTree = "<group>";
+		};
+		84C80D521D0B53AD00A4365F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D731D0B594400A4365F /* AKAppDelegate */,
+				84C80D541D0B53AD00A4365F /* Assets.xcassets */,
+				84C80D551D0B53AD00A4365F /* LaunchScreen.storyboard */,
+				84C80D631D0B57B500A4365F /* FacebookProjectPrefix.pch */,
+				84C80D571D0B53AD00A4365F /* Main.storyboard */,
+				84C80D591D0B53AD00A4365F /* Info.plist */,
+				84C80D5A1D0B53AD00A4365F /* main.m */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		8439B3F41D0B474C00A0AB73 /* AKAppDelegate */ = {
+		84C80D651D0B58FB00A4365F /* AKAlphabet */ = {
 			isa = PBXGroup;
 			children = (
-				8439B3F51D0B474C00A0AB73 /* AKAppDelegate.h */,
-				8439B3F61D0B474C00A0AB73 /* AKAppDelegate.m */,
+				84C80D661D0B58FB00A4365F /* AKAlphabet.h */,
+				84C80D671D0B58FB00A4365F /* AKAlphabet.m */,
+				84C80D681D0B58FB00A4365F /* Private */,
+			);
+			path = AKAlphabet;
+			sourceTree = "<group>";
+		};
+		84C80D681D0B58FB00A4365F /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D691D0B58FB00A4365F /* AKClusterAlphabet.h */,
+				84C80D6A1D0B58FB00A4365F /* AKClusterAlphabet.m */,
+				84C80D6B1D0B58FB00A4365F /* AKRangeAlphabet.h */,
+				84C80D6C1D0B58FB00A4365F /* AKRangeAlphabet.m */,
+				84C80D6D1D0B58FB00A4365F /* AKStringAlphabet.h */,
+				84C80D6E1D0B58FB00A4365F /* AKStringAlphabet.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		84C80D731D0B594400A4365F /* AKAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D741D0B594400A4365F /* AKAppDelegate.h */,
+				84C80D751D0B594400A4365F /* AKAppDelegate.m */,
 			);
 			path = AKAppDelegate;
+			sourceTree = "<group>";
+		};
+		84C80D771D0B59AC00A4365F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D781D0B59AC00A4365F /* Context */,
+				84C80D7C1D0B59AC00A4365F /* Models */,
+				84C80D801D0B59AC00A4365F /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		84C80D781D0B59AC00A4365F /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D791D0B59AC00A4365F /* AKFriendsContext */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		84C80D791D0B59AC00A4365F /* AKFriendsContext */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D7A1D0B59AC00A4365F /* AKFriendsContext.h */,
+				84C80D7B1D0B59AC00A4365F /* AKFriendsContext.m */,
+			);
+			path = AKFriendsContext;
+			sourceTree = "<group>";
+		};
+		84C80D7C1D0B59AC00A4365F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D7D1D0B59AC00A4365F /* AKUser */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84C80D7D1D0B59AC00A4365F /* AKUser */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D7E1D0B59AC00A4365F /* AKUser.h */,
+				84C80D7F1D0B59AC00A4365F /* AKUser.m */,
+			);
+			path = AKUser;
+			sourceTree = "<group>";
+		};
+		84C80D801D0B59AC00A4365F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D811D0B59AC00A4365F /* AKFriendsDetailViewController */,
+				84C80D851D0B59AC00A4365F /* AKFriendsViewController */,
+				84C80D891D0B59AC00A4365F /* AKLoginViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		84C80D811D0B59AC00A4365F /* AKFriendsDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D821D0B59AC00A4365F /* AKFriendDetailViewController.h */,
+				84C80D831D0B59AC00A4365F /* AKFriendDetailViewController.m */,
+				84C80D841D0B59AC00A4365F /* AKFriendDetailViewController.xib */,
+			);
+			path = AKFriendsDetailViewController;
+			sourceTree = "<group>";
+		};
+		84C80D851D0B59AC00A4365F /* AKFriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D861D0B59AC00A4365F /* AKFriendsViewController.h */,
+				84C80D871D0B59AC00A4365F /* AKFriendsViewController.m */,
+				84C80D881D0B59AC00A4365F /* AKFriendsViewController.xib */,
+			);
+			path = AKFriendsViewController;
+			sourceTree = "<group>";
+		};
+		84C80D891D0B59AC00A4365F /* AKLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D8A1D0B59AC00A4365F /* AKLoginView */,
+				84C80D8D1D0B59AC00A4365F /* AKLoginViewController.h */,
+				84C80D8E1D0B59AC00A4365F /* AKLoginViewController.m */,
+				84C80D8F1D0B59AC00A4365F /* AKLoginViewController.xib */,
+			);
+			path = AKLoginViewController;
+			sourceTree = "<group>";
+		};
+		84C80D8A1D0B59AC00A4365F /* AKLoginView */ = {
+			isa = PBXGroup;
+			children = (
+				84C80D8B1D0B59AC00A4365F /* AKLoginView.h */,
+				84C80D8C1D0B59AC00A4365F /* AKLoginView.m */,
+			);
+			path = AKLoginView;
+			sourceTree = "<group>";
+		};
+		D793D474A56B7CAAB0A68E98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D0A0CFFCF56A803D0355A85 /* Pods-AKFacebook.debug.xcconfig */,
+				8D64EE2CAA465223CE802759 /* Pods-AKFacebook.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +687,7 @@
 			);
 			name = AKFacebook;
 			productName = AKFacebook;
-			productReference = 8439B3BF1D0B464E00A0AB73 /* AKFacebook.app */;
+			productReference = 84CCCF4D1D0B5482001A10A7 /* AKFacebook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -272,7 +713,7 @@
 				Base,
 			);
 			mainGroup = 8439B3B61D0B464E00A0AB73;
-			productRefGroup = 8439B3C01D0B464E00A0AB73 /* Products */;
+			productRefGroup = 8439B3B61D0B464E00A0AB73;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -286,13 +727,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8439B4061D0B474C00A0AB73 /* AKLoginViewController.xib in Resources */,
-				8439B4031D0B474C00A0AB73 /* AKFriendsViewController.xib in Resources */,
-				8439B4081D0B474C00A0AB73 /* Assets.xcassets in Resources */,
-				8439B40A1D0B474C00A0AB73 /* Main.storyboard in Resources */,
-				8439B4091D0B474C00A0AB73 /* LaunchScreen.storyboard in Resources */,
-				8439B4011D0B474C00A0AB73 /* AKFriendDetailViewController.xib in Resources */,
-				8439B40B1D0B474C00A0AB73 /* Info.plist in Resources */,
+				84C80D931D0B59AC00A4365F /* AKFriendDetailViewController.xib in Resources */,
+				84C80D401D0B535900A4365F /* AKLoadingView.xib in Resources */,
+				84C80D951D0B59AC00A4365F /* AKFriendsViewController.xib in Resources */,
+				84C80D981D0B59AC00A4365F /* AKLoginViewController.xib in Resources */,
+				84C80D5D1D0B53AD00A4365F /* Main.storyboard in Resources */,
+				84C80D451D0B535900A4365F /* AKUserViewCell.xib in Resources */,
+				84C80D5C1D0B53AD00A4365F /* LaunchScreen.storyboard in Resources */,
+				84C80D5B1D0B53AD00A4365F /* Assets.xcassets in Resources */,
+				84C80D4A1D0B535900A4365F /* AKUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,32 +794,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8439B4051D0B474C00A0AB73 /* AKLoginViewController.m in Sources */,
-				8439B3FF1D0B474C00A0AB73 /* AKUser.m in Sources */,
-				8439B3FE1D0B474C00A0AB73 /* AKFriendsContext.m in Sources */,
-				8439B4021D0B474C00A0AB73 /* AKFriendsViewController.m in Sources */,
-				8439B4041D0B474C00A0AB73 /* AKLoginView.m in Sources */,
-				8439B4071D0B474C00A0AB73 /* AKAppDelegate.m in Sources */,
-				8439B40C1D0B474C00A0AB73 /* main.m in Sources */,
-				8439B4001D0B474C00A0AB73 /* AKFriendDetailViewController.m in Sources */,
+				84C80D421D0B535900A4365F /* AKImageModel.m in Sources */,
+				84C80D2D1D0B535900A4365F /* AKObserverArray.m in Sources */,
+				84C80D761D0B594400A4365F /* AKAppDelegate.m in Sources */,
+				84C80D3A1D0B535900A4365F /* AKArrayManager.m in Sources */,
+				84C80D2B1D0B535900A4365F /* AKDispatch.m in Sources */,
+				84C80D901D0B59AC00A4365F /* AKFriendsContext.m in Sources */,
+				84C80D2C1D0B535900A4365F /* AKObserver.m in Sources */,
+				84C80D701D0B58FB00A4365F /* AKClusterAlphabet.m in Sources */,
+				84C80D461D0B535900A4365F /* AKUserView.m in Sources */,
+				84C80D941D0B59AC00A4365F /* AKFriendsViewController.m in Sources */,
+				84C80D341D0B535900A4365F /* NSString+AKExtensions.m in Sources */,
+				84C80D391D0B535900A4365F /* AKArrayModel.m in Sources */,
+				84C80D3E1D0B535900A4365F /* AKStringModel.m in Sources */,
+				84C80D331D0B535900A4365F /* NSObject+AKExtensions.m in Sources */,
+				84C80D3C1D0B535900A4365F /* AKSharedCacheModel.m in Sources */,
+				84C80D381D0B535900A4365F /* UIWindow+AKCategory.m in Sources */,
+				84C80D5F1D0B53AD00A4365F /* main.m in Sources */,
+				84C80D371D0B535900A4365F /* UIViewController+AKCategory.m in Sources */,
+				84C80D301D0B535900A4365F /* CGGeometry+AKCategory.m in Sources */,
+				84C80D3F1D0B535900A4365F /* AKLoadingView.m in Sources */,
+				84C80D491D0B535900A4365F /* AKUserViewController.m in Sources */,
+				84C80D351D0B535900A4365F /* UINib+AKCategory.m in Sources */,
+				84C80D971D0B59AC00A4365F /* AKLoginViewController.m in Sources */,
+				84C80D6F1D0B58FB00A4365F /* AKAlphabet.m in Sources */,
+				84C80D311D0B535900A4365F /* NSBundle+AKCategory.m in Sources */,
+				84C80D2F1D0B535900A4365F /* AKObserverObject.m in Sources */,
+				84C80D361D0B535900A4365F /* UITableView+AKCategory.m in Sources */,
+				84C80D441D0B535900A4365F /* AKUserViewCell.m in Sources */,
+				84C80D911D0B59AC00A4365F /* AKUser.m in Sources */,
+				84C80D431D0B535900A4365F /* AKImageView.m in Sources */,
+				84C80D3B1D0B535900A4365F /* AKModel.m in Sources */,
+				84C80D921D0B59AC00A4365F /* AKFriendDetailViewController.m in Sources */,
+				84C80D3D1D0B535900A4365F /* AKStateModel.m in Sources */,
+				84C80D711D0B58FB00A4365F /* AKRangeAlphabet.m in Sources */,
+				84C80D321D0B535900A4365F /* NSFileManager+AKCategory.m in Sources */,
+				84C80D411D0B535900A4365F /* AKViewModel.m in Sources */,
+				84C80D961D0B59AC00A4365F /* AKLoginView.m in Sources */,
+				84C80D2E1D0B535900A4365F /* AKObserverDictionary.m in Sources */,
+				84C80D721D0B58FB00A4365F /* AKStringAlphabet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8439B3F81D0B474C00A0AB73 /* LaunchScreen.storyboard */ = {
+		84C80D551D0B53AD00A4365F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8439B3F91D0B474C00A0AB73 /* Base */,
+				84C80D561D0B53AD00A4365F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		8439B3FA1D0B474C00A0AB73 /* Main.storyboard */ = {
+		84C80D571D0B53AD00A4365F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8439B3FB1D0B474C00A0AB73 /* Base */,
+				84C80D581D0B53AD00A4365F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -468,10 +942,13 @@
 		};
 		8439B3D71D0B464F00A0AB73 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85ABAF5104C5E7C9B2F764FE /* Pods-AKFacebook.debug.xcconfig */;
+			baseConfigurationReference = 0D0A0CFFCF56A803D0355A85 /* Pods-AKFacebook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AKFacebook/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AKFacebook/SupportingFiles/FacebookProjectPrefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AKFacebook/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AK.AKFacebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -480,10 +957,13 @@
 		};
 		8439B3D81D0B464F00A0AB73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79298EF1B753A59B5E794EA5 /* Pods-AKFacebook.release.xcconfig */;
+			baseConfigurationReference = 8D64EE2CAA465223CE802759 /* Pods-AKFacebook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AKFacebook/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AKFacebook/SupportingFiles/FacebookProjectPrefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AKFacebook/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AK.AKFacebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";

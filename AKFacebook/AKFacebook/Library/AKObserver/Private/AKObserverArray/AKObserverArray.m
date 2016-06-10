@@ -21,8 +21,6 @@
 
 - (void)dealloc {
     self.handlers = nil;
-    
-    [super dealloc];
 }
 
 - (instancetype)init {
@@ -38,7 +36,7 @@
 #pragma mark Accessors
 
 - (NSArray *)handlersObjects {
-    return [[self.handlers copy] autorelease];
+    return [self.handlers copy];
 }
 
 #pragma mark -
@@ -50,7 +48,7 @@
 }
 
 - (void)removeHandlersForObject:(id)object {
-    NSArray *objects = [[self.handlersObjects copy] autorelease];
+    NSArray *objects = [self.handlersObjects copy];
     for (AKObserverObject *observerObject in objects) {
         if (observerObject.object == object) {
             [self.handlers removeObject:observerObject];

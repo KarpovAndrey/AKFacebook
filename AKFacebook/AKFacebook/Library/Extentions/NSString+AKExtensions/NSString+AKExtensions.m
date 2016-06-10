@@ -32,7 +32,7 @@ const NSUInteger kAKDefaultQuantityStringsMax = 50;
         [string appendString:charString];
     }
     
-    return [[string copy] autorelease];
+    return [string copy];
 }
 
 + (instancetype)randomString {

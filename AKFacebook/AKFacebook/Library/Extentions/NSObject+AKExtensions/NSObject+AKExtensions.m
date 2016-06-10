@@ -11,7 +11,7 @@
 @implementation NSObject (AKCategory)
 
 + (instancetype)object {
-    return [[[[self class] alloc] init] autorelease];
+    return [[[self class] alloc] init];
 }
 
 + (NSArray *)objectWithCount:(NSUInteger)count {
@@ -20,7 +20,7 @@
         [array addObject:[self object]];
     }
     
-    return [[array copy] autorelease];
+    return [array copy];
 }
 
 @end

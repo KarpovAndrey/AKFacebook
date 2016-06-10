@@ -26,8 +26,6 @@
 
 - (void)dealloc {
     self.observerDictionaries = nil;
-    
-    [super dealloc];
 }
 
 - (instancetype)init {

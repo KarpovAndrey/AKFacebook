@@ -22,7 +22,7 @@
 #pragma mark Class Methods
 
 + (AKObserverDictionary *)dictionaryWithState:(NSUInteger)state {
-    return [[[AKObserverDictionary alloc] initWithState:state] autorelease];
+    return [[AKObserverDictionary alloc] initWithState:state];
 }
 
 #pragma mark -
@@ -31,8 +31,6 @@
 - (void)dealloc {
     [self removeAllHandlers];
     self.observerArray = nil;
-    
-    [super dealloc];
 }
 
 - (instancetype)init {
@@ -60,7 +58,7 @@
         [handlers addObject:observer.handler];
     }
     
-    return [[handlers copy] autorelease];
+    return [handlers copy];
 }
 
 #pragma mark -
