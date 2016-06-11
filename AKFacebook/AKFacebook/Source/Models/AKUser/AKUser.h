@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface AKUser : NSObject
-@property (nonatomic, copy) NSString    *name;
-@property (nonatomic, copy) NSString    *surname;
-@property (nonatomic, copy) NSString    *userID;
+@property (nonatomic, copy)     NSString    *name;
+@property (nonatomic, copy)     NSString    *lastName;
+@property (nonatomic, copy)     NSString    *userID;
+@property (nonatomic, copy)     NSString    *gender;
+@property (nonatomic, copy)     NSString    *pictureURLPath;
+@property (nonatomic, strong)   NSArray     *friends;
 
 + (instancetype)userWithDictionary:(NSDictionary *)dictionary;
 

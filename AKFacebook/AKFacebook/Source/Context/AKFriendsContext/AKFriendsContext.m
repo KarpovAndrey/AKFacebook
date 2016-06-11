@@ -38,13 +38,17 @@
     NSString *path = [NSString stringWithFormat:@"/%@", self.userID];
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
                                   initWithGraphPath:path
-                                  parameters:@{@"fields": @"friends{location,gender,picture,birthday}",}
+                                  parameters:@{@"fields": @"friends{id,first_name,last_name,gender,friends,picture}",}
                                   HTTPMethod:@"GET"];
     [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, NSDictionary *result, NSError *error) {
         NSArray *friends = [result valueForKeyPath:@"friends.data"];
         NSMutableArray *friendsArray = [NSMutableArray array];
+        for (NSDictionary *dictionary in friends) {
+            AKUser *user = [AKUser userWithDictionary:dictionary];
+            [friendsArray addObject:user];
+        }
+        
         [self setState:kAKModelLoadedState withObject:[friendsArray copy]];
-        NSLog(@"%@", friends);
     }];
 }
 

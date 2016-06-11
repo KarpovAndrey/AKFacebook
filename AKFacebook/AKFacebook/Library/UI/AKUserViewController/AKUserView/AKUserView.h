@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AKViewModel.h"
+#import "AKView.h"
 
-@interface AKUserView : AKViewModel
+@interface AKUserView : AKView
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AKViewModel: UIView
+@interface AKView: UIView
 
 - (void)showLoadingView;
 - (void)showLoadingViewAnimated:(BOOL)animated;

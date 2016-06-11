@@ -10,7 +10,7 @@
 
 @class AKUser;
 
-@interface AKFriendsViewController : UIViewController
-@property (nonatomic, copy) AKUser    *user;
+@interface AKFriendsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) AKUser    *user;
 
 @end

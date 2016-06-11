@@ -17,8 +17,7 @@
 #define kAKFacebookPermissions @[@"public_profile", @"user_friends"]
 
 @interface AKLoginViewController ()
-@property (nonatomic, strong) AKLoginView    *rootView;
-@property (nonatomic, strong) AKUser         *user;
+@property (nonatomic, readonly) AKLoginView    *rootView;
 
 @end
 
@@ -32,23 +31,10 @@ AKRootViewAndReturnIfNil(AKLoginView);
 #pragma mark -
 #pragma mark View LifeCycle
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     self.navigationController.navigationBarHidden = YES;
-}
-
-#pragma mark -
-#pragma mark Accessors
-
-- (void)setUser:(AKUser *)user {
-    if (_user != user) {
-        _user = user;
-        
-        AKFriendsViewController * controller = [AKFriendsViewController new];
-        controller.user = _user;
-        [self.navigationController pushViewController:controller animated:NO];
-    }
 }
 
 #pragma mark -
@@ -64,7 +50,9 @@ AKRootViewAndReturnIfNil(AKLoginView);
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (!error && !result.isCancelled) {
              NSLog(@"Logged in");
-             self.user = [[AKUser alloc] initWithUserID:result.token.userID];
+             AKFriendsViewController *controller = [AKFriendsViewController new];
+             controller.user = [[AKUser alloc] initWithUserID:result.token.userID];
+             [self.navigationController pushViewController:controller animated:NO];
          } else {
              NSLog(@"Not logged in");
          }

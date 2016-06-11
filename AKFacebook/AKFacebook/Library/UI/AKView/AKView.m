@@ -1,24 +1,24 @@
 //
-//  AKViewModel.m
+//  AKView.m
 //  AKStudy
 //
 //  Created by Admin on 19.05.16.
 //  Copyright © 2016 Admin. All rights reserved.
 //
 
-#import "AKViewModel.h"
+#import "AKView.h"
 #import "AKLoadingView.h"
 
 static CGFloat const kAKDefaultAnimateDuration  = 1.0;
 static CGFloat const kAKDefaultLoadingAlpha     = 0.9;
 static CGFloat const kAKDefaultRemovingAlpha    = 0.2;
 
-@interface AKViewModel ()
+@interface AKView ()
 @property (nonatomic, strong) AKLoadingView *loadingView;
 
 @end
 
-@implementation AKViewModel
+@implementation AKView
 
 #pragma mark -
 #pragma mark Public

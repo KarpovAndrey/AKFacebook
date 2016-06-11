@@ -32,7 +32,12 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
-        
+        self.name = [dictionary valueForKey:@"first_name"];
+        self.lastName = [dictionary valueForKey:@"last_name"];
+        self.gender = [dictionary valueForKey:@"gender"];
+        self.userID = [dictionary valueForKey:@"id"];
+        self.pictureURLPath = [dictionary valueForKeyPath:@"picture.data.url"];
+        self.friends = [dictionary valueForKey:@"friends"];
     }
     
     return self;
