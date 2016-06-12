@@ -7,6 +7,7 @@
 //
 
 #import "AKUser.h"
+#import "AKFacebookConstans.h"
 
 @implementation AKUser
 
@@ -32,15 +33,26 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
-        self.name = [dictionary valueForKey:@"first_name"];
-        self.lastName = [dictionary valueForKey:@"last_name"];
-        self.gender = [dictionary valueForKey:@"gender"];
-        self.userID = [dictionary valueForKey:@"id"];
-        self.pictureURLPath = [dictionary valueForKeyPath:@"picture.data.url"];
-        self.friends = [dictionary valueForKey:@"friends"];
+        self.firstName = [dictionary valueForKey:kAKFirstNameKey];
+        self.lastName = [dictionary valueForKey:kAKLastNameKey];
+        self.gender = [dictionary valueForKey:kAKGenderKey];
+        self.userID = [dictionary valueForKey:kAKUserIDKey];
+        self.pictureURLPath = [dictionary valueForKeyPath:kAKPictureURLKeyPath];
+        self.friends = [dictionary valueForKey:kAKFriendsKey];
     }
     
     return self;
+}
+
+#pragma mark -
+#pragma mark Accessors
+
+- (NSString *)largePicture {
+    return [NSString stringWithFormat:kAKLargePictureURL, self.userID];
+}
+
+- (NSString *)smallPicture {
+    return [NSString stringWithFormat:kAKSmallPictureURL, self.userID];
 }
 
 @end

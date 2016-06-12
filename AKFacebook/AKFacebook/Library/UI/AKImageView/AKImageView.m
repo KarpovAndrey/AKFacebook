@@ -49,9 +49,9 @@
     self.customImageView.backgroundColor = [UIColor clearColor];
     [self addSubview:imageView];
     
-    CALayer *layer = imageView.layer;
-    [layer setBorderColor: [[UIColor grayColor] CGColor]];
-    [layer setBorderWidth: 0.5];
+//    CALayer *layer = imageView.layer;
+//    [layer setBorderColor: [[UIColor grayColor] CGColor]];
+//    [layer setBorderWidth: 0.5];
     self.customImageView = imageView;
 
     [self showSpinner];
@@ -95,7 +95,7 @@
 
 - (void)showSpinner {
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
-                                        UIActivityIndicatorViewStyleWhite];
+                                        UIActivityIndicatorViewStyleGray];
     UIImageView *imageView = self.customImageView;
     spinner.center = imageView.center;
     [spinner startAnimating];

@@ -7,7 +7,6 @@
 //
 
 #import "AKFriendsViewCell.h"
-#import "AKStringModel.h"
 #import "AKImageView.h"
 #import "AKUser.h"
 
@@ -17,7 +16,7 @@
 #pragma mark Public
 
 - (void)fillWithModel:(AKUser *)user {
-    NSString *labelString = [NSString stringWithFormat:@"%@ %@", user.name, user.lastName];
+    NSString *labelString = [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
     self.cellLabel.text = labelString;
     self.customImageView.URL = [NSURL URLWithString:user.pictureURLPath];
 }

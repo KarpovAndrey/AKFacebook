@@ -1,23 +1,23 @@
 //
-//  AKFriendsContext.m
-//  AKStudy
+//  AKUserContext.m
+//  AKFacebook
 //
-//  Created by Admin on 09.06.16.
-//  Copyright © 2016 Admin. All rights reserved.
+//  Created by Admin on 12.06.16.
+//  Copyright © 2016 Karpov Andrey. All rights reserved.
 //
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-#import "AKFriendsContext.h"
+#import "AKUserContext.h"
 #import "AKUser.h"
 #import "AKFacebookConstans.h"
 
-@interface AKFriendsContext ()
+@interface AKUserContext ()
 @property (nonatomic, copy) NSString *userID;
 
 @end
 
-@implementation AKFriendsContext
+@implementation AKUserContext
 
 #pragma mark -
 #pragma mark Initialization & Deallocation
@@ -31,7 +31,6 @@
     return self;
 }
 
-
 #pragma mark -
 #pragma mark Public
 
@@ -39,17 +38,16 @@
     NSString *path = [NSString stringWithFormat:@"/%@", self.userID];
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
                                   initWithGraphPath:path
-                                  parameters:kAKFriendsRequestParameters
+                                  parameters:kAKUserRequestParameters
                                   HTTPMethod:kAKRequestHTTPMethod];
     [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, NSDictionary *result, NSError *error) {
-        NSArray *friends = [result valueForKeyPath:kAKFriendsKeyPath];
-        NSMutableArray *friendsArray = [NSMutableArray array];
-        for (NSDictionary *dictionary in friends) {
-            AKUser *user = [AKUser userWithDictionary:dictionary];
-            [friendsArray addObject:user];
-        }
-        
-        [self setState:kAKModelLoadedState withObject:[friendsArray copy]];
+        AKUser *user = [AKUser new];
+        user.firstName = [result valueForKeyPath:kAKFirstNameKey];
+        user.lastName = [result valueForKeyPath:kAKLastNameKey];
+        user.gender = [result valueForKeyPath:kAKGenderKey];
+        user.pictureURLPath = [result valueForKeyPath:kAKPictureURLKeyPath];
+
+        [self setState:kAKModelLoadedState withObject:user];
     }];
 }
 

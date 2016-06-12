@@ -16,25 +16,46 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-xs-rWp">
-                    <rect key="frame" x="67" y="482" width="187" height="32"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginScreenImageLight" translatesAutoresizingMaskIntoConstraints="NO" id="7kq-7R-kQP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="0.20032327586206897" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrX-kO-yrm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-xs-rWp">
+                            <rect key="frame" x="67" y="450" width="187" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="tPv-xs-rWp" secondAttribute="height" multiplier="187:32" id="TGd-vn-lVT"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="LoginButton">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onClickLoginButton:" destination="-1" eventType="touchUpInside" id="FUH-DB-zNh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="tPv-xs-rWp" secondAttribute="height" multiplier="187:32" id="TGd-vn-lVT"/>
+                        <constraint firstAttribute="bottom" secondItem="tPv-xs-rWp" secondAttribute="bottom" constant="86" id="H9C-xU-sFI"/>
+                        <constraint firstItem="tPv-xs-rWp" firstAttribute="centerX" secondItem="rrX-kO-yrm" secondAttribute="centerX" id="a2A-Hd-7A6"/>
                     </constraints>
-                    <state key="normal" backgroundImage="LoginButton">
-                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onClickLoginButton:" destination="-1" eventType="touchUpInside" id="FUH-DB-zNh"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="tPv-xs-rWp" secondAttribute="bottom" constant="54" id="0ef-Ix-FWl"/>
-                <constraint firstItem="tPv-xs-rWp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NfE-gB-CZ3"/>
-                <constraint firstItem="tPv-xs-rWp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="67" id="pXf-Mm-rj5"/>
+                <constraint firstItem="rrX-kO-yrm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6oj-pD-d1L"/>
+                <constraint firstAttribute="trailing" secondItem="rrX-kO-yrm" secondAttribute="trailing" id="QKR-m4-dJj"/>
+                <constraint firstItem="7kq-7R-kQP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qtp-Ga-SiG"/>
+                <constraint firstAttribute="trailing" secondItem="7kq-7R-kQP" secondAttribute="trailing" id="dsK-1a-Mqr"/>
+                <constraint firstAttribute="bottom" secondItem="7kq-7R-kQP" secondAttribute="bottom" id="fq5-hJ-w8N"/>
+                <constraint firstItem="7kq-7R-kQP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jt7-IT-yYd"/>
+                <constraint firstItem="rrX-kO-yrm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rsv-oP-ha8"/>
+                <constraint firstAttribute="bottom" secondItem="rrX-kO-yrm" secondAttribute="bottom" id="t1V-y4-h46"/>
+                <constraint firstItem="rrX-kO-yrm" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="40:71" id="ulD-zQ-GOo"/>
             </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="loginButton" destination="tPv-xs-rWp" id="VEc-yt-mGN"/>
@@ -43,5 +64,6 @@
     </objects>
     <resources>
         <image name="LoginButton" width="187" height="32"/>
+        <image name="LoginScreenImageLight" width="320" height="568"/>
     </resources>
 </document>

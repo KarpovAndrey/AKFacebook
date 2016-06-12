@@ -13,8 +13,7 @@
 #import "AKLoginView.h"
 #import "AKFriendsViewController.h"
 #import "AKUser.h"
-
-#define kAKFacebookPermissions @[@"public_profile", @"user_friends"]
+#import "AKFacebookConstans.h"
 
 @interface AKLoginViewController ()
 @property (nonatomic, readonly) AKLoginView    *rootView;

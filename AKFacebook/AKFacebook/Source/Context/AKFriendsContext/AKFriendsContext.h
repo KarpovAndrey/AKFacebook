@@ -8,6 +8,8 @@
 
 #import "AKModel.h"
 
+@class AKUser;
+
 @interface AKFriendsContext : AKModel
 
 - (instancetype)initWithUserID:(NSString *)userID;

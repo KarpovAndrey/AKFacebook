@@ -12,17 +12,19 @@
 #import "AKFriendsContext.h"
 #import "AKUser.h"
 #import "AKFriendsViewController.h"
+#import "AKFriendsDetailViewController.h"
 #import "AKFriendsView.h"
 #import "AKLoadingView.h"
 #import "AKFriendsViewCell.h"
 
 static NSString * const kAKLoadingViewMessage = @"Loading...";
+static NSString * const kAKNavigationItemTitle = @"FRIENDS";
 
 @interface AKFriendsViewController ()
-@property (nonatomic, strong)   AKFriendsContext    *context;
-@property (nonatomic, strong)   NSArray             *friends;
-@property (nonatomic, readonly)   AKFriendsView       *rootView;
-@property (nonatomic, strong)   AKLoadingView       *loadingView;
+@property (nonatomic, strong)       AKFriendsContext    *context;
+@property (nonatomic, strong)       NSArray             *friends;
+@property (nonatomic, readonly)     AKFriendsView       *rootView;
+@property (nonatomic, strong)       AKLoadingView       *loadingView;
 
 @end
 
@@ -36,13 +38,10 @@ static NSString * const kAKLoadingViewMessage = @"Loading...";
     [self.rootView showLoadingViewWithMessage:kAKLoadingViewMessage animated:YES];
 
     self.navigationController.navigationBarHidden = NO;
-}
+    self.navigationItem.title = kAKNavigationItemTitle;
 
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    
-////    self.rootView.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"1406958748.jpg"]];
-//}
+    self.context = [[AKFriendsContext alloc] initWithUserID:_user.userID];
+}
 
 #pragma mark -
 #pragma mark Accessors
@@ -86,7 +85,14 @@ AKRootViewAndReturnIfNil(AKFriendsView);
     AKFriendsViewCell *cell = [tableView dequeueCellFromNibWithClass:[AKFriendsViewCell class]];
     [cell fillWithModel:self.friends[indexPath.row]];
     
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    AKFriendsDetailViewController *controller = [AKFriendsDetailViewController new];
+    controller.user = self.friends[indexPath.row];
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 @end
