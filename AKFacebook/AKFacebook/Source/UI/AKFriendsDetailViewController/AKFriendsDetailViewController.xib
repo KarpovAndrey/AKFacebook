@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AKFriendsDetailViewController">
@@ -15,9 +16,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHx-ib-166" userLabel="UserView" customClass="AKImageView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHx-ib-166" userLabel="UserView" customClass="AKImageView">
                     <rect key="frame" x="60" y="72" width="200" height="200"/>
-                    <color key="backgroundColor" red="0.61841375769999996" green="0.70434695510000001" blue="0.38462965310000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="UHx-ib-166" secondAttribute="height" multiplier="1:1" id="Dz6-0a-s3d"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -25,25 +29,32 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx1-DX-SfM" userLabel="Name">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx1-DX-SfM" userLabel="Name">
                     <rect key="frame" x="24" y="280" width="65" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="9ml-hO-A1r"/>
+                        <constraint firstAttribute="width" constant="65" id="SGz-rs-Lh8"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="16"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pci-j1-uRK" userLabel="Gender">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pci-j1-uRK" userLabel="Gender">
                     <rect key="frame" x="24" y="325" width="65" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="siE-cg-51i"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="16"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserGender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0r-Fs-yhN" userLabel="UserGender">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0r-Fs-yhN" userLabel="UserGender">
                     <rect key="frame" x="97" y="325" width="171" height="44"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flo-AQ-Dab" userLabel="UserName">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flo-AQ-Dab" userLabel="UserName">
                     <rect key="frame" x="97" y="280" width="171" height="44"/>
                     <accessibility key="accessibilityConfiguration" label="Name"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
@@ -51,9 +62,24 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.19235697703126575" green="0.79689503205128209" blue="0.59913297770996865" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.033356600038293098" green="0.66183894230769225" blue="0.64319901940796176" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="pci-j1-uRK" firstAttribute="top" secondItem="p0r-Fs-yhN" secondAttribute="top" id="2rk-25-Ak4"/>
+                <constraint firstItem="Wx1-DX-SfM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="6Wa-qB-ti3"/>
+                <constraint firstItem="Flo-AQ-Dab" firstAttribute="trailing" secondItem="p0r-Fs-yhN" secondAttribute="trailing" id="87n-XY-4eH"/>
+                <constraint firstItem="Flo-AQ-Dab" firstAttribute="leading" secondItem="Wx1-DX-SfM" secondAttribute="trailing" constant="8" symbolic="YES" id="BGe-bY-z2E"/>
+                <constraint firstItem="UHx-ib-166" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="EDY-ix-Rs4"/>
+                <constraint firstAttribute="trailing" secondItem="Flo-AQ-Dab" secondAttribute="trailing" constant="52" id="Emq-ub-qyG"/>
+                <constraint firstItem="p0r-Fs-yhN" firstAttribute="leading" secondItem="pci-j1-uRK" secondAttribute="trailing" constant="8" symbolic="YES" id="HGf-kM-TSq"/>
+                <constraint firstItem="Wx1-DX-SfM" firstAttribute="leading" secondItem="pci-j1-uRK" secondAttribute="leading" id="Lyx-HN-Clf"/>
+                <constraint firstItem="Wx1-DX-SfM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="280" id="NFq-Ca-v5a"/>
+                <constraint firstItem="Wx1-DX-SfM" firstAttribute="baseline" secondItem="Flo-AQ-Dab" secondAttribute="baseline" id="Ui6-bl-nKw"/>
+                <constraint firstItem="pci-j1-uRK" firstAttribute="top" secondItem="Wx1-DX-SfM" secondAttribute="bottom" constant="1" id="XJ2-D8-F05"/>
+                <constraint firstItem="Flo-AQ-Dab" firstAttribute="leading" secondItem="p0r-Fs-yhN" secondAttribute="leading" id="kHi-Il-75y"/>
                 <constraint firstItem="UHx-ib-166" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pxD-aB-YzR"/>
+                <constraint firstItem="Wx1-DX-SfM" firstAttribute="top" secondItem="Flo-AQ-Dab" secondAttribute="top" id="wOy-mn-Dfu"/>
+                <constraint firstItem="Wx1-DX-SfM" firstAttribute="top" secondItem="UHx-ib-166" secondAttribute="bottom" constant="8" symbolic="YES" id="zEG-a7-zHu"/>
+                <constraint firstItem="pci-j1-uRK" firstAttribute="baseline" secondItem="p0r-Fs-yhN" secondAttribute="baseline" id="zMd-a5-Ap5"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>

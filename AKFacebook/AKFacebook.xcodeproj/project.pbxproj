@@ -15,6 +15,8 @@
 		8488C07E1D0C771700132A96 /* AKFriendsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488C07C1D0C771700132A96 /* AKFriendsViewCell.m */; };
 		8488C07F1D0C771700132A96 /* AKFriendsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8488C07D1D0C771700132A96 /* AKFriendsViewCell.xib */; };
 		8488C0821D0C7B8900132A96 /* 1406958748.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488C0811D0C7B8900132A96 /* 1406958748.jpg */; };
+		84B5CC441D0EF40800B5E9CA /* AKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5CC431D0EF40800B5E9CA /* AKContext.m */; };
+		84B5CC481D0F126800B5E9CA /* AKCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5CC471D0F126800B5E9CA /* AKCustomViewController.m */; };
 		84BA09821D0D78B70034E996 /* AKFriendsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA09811D0D78B70034E996 /* AKFriendsDetailView.m */; };
 		84BA09861D0DC61F0034E996 /* AKUserContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA09851D0DC61F0034E996 /* AKUserContext.m */; };
 		84C36BA11D0C27AD004B1443 /* iOS Study Plan.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84C36BA01D0C27AD004B1443 /* iOS Study Plan.txt */; };
@@ -79,7 +81,11 @@
 		8488C07C1D0C771700132A96 /* AKFriendsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsViewCell.m; sourceTree = "<group>"; };
 		8488C07D1D0C771700132A96 /* AKFriendsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKFriendsViewCell.xib; sourceTree = "<group>"; };
 		8488C0811D0C7B8900132A96 /* 1406958748.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1406958748.jpg; sourceTree = "<group>"; };
-		84BA097E1D0D6B940034E996 /* AKFacebookConstans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFacebookConstans.h; sourceTree = "<group>"; };
+		84B5CC401D0EF2FF00B5E9CA /* AKFacebookConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFacebookConstants.h; sourceTree = "<group>"; };
+		84B5CC421D0EF40800B5E9CA /* AKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKContext.h; sourceTree = "<group>"; };
+		84B5CC431D0EF40800B5E9CA /* AKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKContext.m; sourceTree = "<group>"; };
+		84B5CC461D0F126800B5E9CA /* AKCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCustomViewController.h; sourceTree = "<group>"; };
+		84B5CC471D0F126800B5E9CA /* AKCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCustomViewController.m; sourceTree = "<group>"; };
 		84BA09801D0D78B70034E996 /* AKFriendsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendsDetailView.h; sourceTree = "<group>"; };
 		84BA09811D0D78B70034E996 /* AKFriendsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsDetailView.m; sourceTree = "<group>"; };
 		84BA09841D0DC61F0034E996 /* AKUserContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUserContext.h; sourceTree = "<group>"; };
@@ -250,6 +256,24 @@
 				8488C0811D0C7B8900132A96 /* 1406958748.jpg */,
 			);
 			path = Resourse;
+			sourceTree = "<group>";
+		};
+		84B5CC411D0EF3CC00B5E9CA /* AKContext */ = {
+			isa = PBXGroup;
+			children = (
+				84B5CC421D0EF40800B5E9CA /* AKContext.h */,
+				84B5CC431D0EF40800B5E9CA /* AKContext.m */,
+			);
+			path = AKContext;
+			sourceTree = "<group>";
+		};
+		84B5CC451D0F124500B5E9CA /* AKCustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84B5CC461D0F126800B5E9CA /* AKCustomViewController.h */,
+				84B5CC471D0F126800B5E9CA /* AKCustomViewController.m */,
+			);
+			path = AKCustomViewController;
 			sourceTree = "<group>";
 		};
 		84BA097F1D0D789D0034E996 /* AKFriendsDetailView */ = {
@@ -633,7 +657,7 @@
 		84C80D771D0B59AC00A4365F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				84BA097E1D0D6B940034E996 /* AKFacebookConstans.h */,
+				84B5CC401D0EF2FF00B5E9CA /* AKFacebookConstants.h */,
 				84C80D781D0B59AC00A4365F /* Context */,
 				84C80D7C1D0B59AC00A4365F /* Models */,
 				84C80D801D0B59AC00A4365F /* UI */,
@@ -644,6 +668,7 @@
 		84C80D781D0B59AC00A4365F /* Context */ = {
 			isa = PBXGroup;
 			children = (
+				84B5CC411D0EF3CC00B5E9CA /* AKContext */,
 				84BA09831D0DC6070034E996 /* AKUserContext */,
 				84C80D791D0B59AC00A4365F /* AKFriendsContext */,
 			);
@@ -679,6 +704,7 @@
 		84C80D801D0B59AC00A4365F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				84B5CC451D0F124500B5E9CA /* AKCustomViewController */,
 				84C80D811D0B59AC00A4365F /* AKFriendsDetailViewController */,
 				84C80D851D0B59AC00A4365F /* AKFriendsViewController */,
 				84C80D891D0B59AC00A4365F /* AKLoginViewController */,
@@ -887,12 +913,14 @@
 				84C80D3C1D0B535900A4365F /* AKSharedCacheModel.m in Sources */,
 				84C80D381D0B535900A4365F /* UIWindow+AKCategory.m in Sources */,
 				84C80D5F1D0B53AD00A4365F /* main.m in Sources */,
+				84B5CC441D0EF40800B5E9CA /* AKContext.m in Sources */,
 				84C80D371D0B535900A4365F /* UIViewController+AKCategory.m in Sources */,
 				84C80D301D0B535900A4365F /* CGGeometry+AKCategory.m in Sources */,
 				84BA09821D0D78B70034E996 /* AKFriendsDetailView.m in Sources */,
 				8488C0261D0C634C00132A96 /* AKFriendsView.m in Sources */,
 				84C80D491D0B535900A4365F /* AKUserViewController.m in Sources */,
 				84C80D351D0B535900A4365F /* UINib+AKCategory.m in Sources */,
+				84B5CC481D0F126800B5E9CA /* AKCustomViewController.m in Sources */,
 				84C80D971D0B59AC00A4365F /* AKLoginViewController.m in Sources */,
 				84C80D6F1D0B58FB00A4365F /* AKAlphabet.m in Sources */,
 				84C80D311D0B535900A4365F /* NSBundle+AKCategory.m in Sources */,

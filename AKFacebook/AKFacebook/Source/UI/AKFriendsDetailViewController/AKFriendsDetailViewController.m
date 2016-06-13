@@ -15,28 +15,13 @@ static NSString * const kAKNavigationItemTitle = @"FRIEND DETAIL";
 
 @interface AKFriendsDetailViewController ()
 @property (nonatomic, readonly) AKFriendsDetailView       *rootView;
-//@property (nonatomic, strong)   AKUserContext             *context;
+@property (nonatomic, strong)   AKUserContext             *context;
+
+- (void)load;
 
 @end
 
 @implementation AKFriendsDetailViewController
-
-#pragma mark -
-#pragma mark View LifeCycle
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    UINavigationController *controller = self.navigationController;
-    controller.navigationBarHidden = NO;
-    self.navigationItem.title = kAKNavigationItemTitle;
-    [self.rootView fillWithModel:self.user];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-}
 
 #pragma mark -
 #pragma mark Accessors
@@ -47,25 +32,37 @@ AKRootViewAndReturnIfNil(AKFriendsDetailView);
     if (_user != user) {
         _user = user;
         
-//        self.context = [[AKUserContext alloc] initWithUserID:_user.userID];
+        self.context = [[AKUserContext alloc] initWithUser:_user];
     }
 }
 
-//- (void)setContext:(AKUserContext *)context {
-//    if (_context != context) {
-//        _context = context;
-//        
-//        AKWeakify;
-//        [_context addHandler:^(AKUser *user) {
-//            AKStrongifyAndReturnIfNil(AKFriendsDetailViewController)
-//            strongSelf.user = user;
-//            AKFriendsDetailView *rootView = strongSelf.rootView;
-//            [rootView removeLoadingViewAnimated:YES];
-//        }forState:kAKModelLoadedState
-//                      object:self];
-//        
-//        [_context load];
-//    }
-//}
+- (void)setContext:(AKUserContext *)context {
+    if (_context != context) {
+        _context = context;
+        
+        AKWeakify;
+        [_context addHandler:^(AKUser *user) {
+            AKStrongifyAndReturnIfNil(AKFriendsDetailViewController)
+            strongSelf.user = user;
+            [strongSelf load];
+        }forState:kAKModelLoadedState
+                      object:self];
+        
+        [_context load];
+    }
+}
+
+- (NSString *)navigationItemTitle {
+    return kAKNavigationItemTitle;
+}
+
+#pragma mark -
+#pragma mark Private
+
+- (void)load {
+    AKFriendsDetailView *rootView = self.rootView;
+    [rootView fillWithModel:self.user];
+    [rootView removeLoadingViewAnimated:YES];
+}
 
 @end

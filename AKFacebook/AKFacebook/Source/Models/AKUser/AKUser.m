@@ -7,7 +7,7 @@
 //
 
 #import "AKUser.h"
-#import "AKFacebookConstans.h"
+#import "AKFacebookConstants.h"
 
 @implementation AKUser
 

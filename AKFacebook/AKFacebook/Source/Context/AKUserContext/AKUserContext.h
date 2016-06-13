@@ -6,10 +6,8 @@
 //  Copyright © 2016 Karpov Andrey. All rights reserved.
 //
 
-#import "AKModel.h"
+#import "AKContext.h"
 
-@interface AKUserContext : AKModel
-
-- (instancetype)initWithUserID:(NSString *)userID;
+@interface AKUserContext : AKContext
 
 @end

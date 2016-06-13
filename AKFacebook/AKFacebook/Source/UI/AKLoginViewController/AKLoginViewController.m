@@ -13,7 +13,7 @@
 #import "AKLoginView.h"
 #import "AKFriendsViewController.h"
 #import "AKUser.h"
-#import "AKFacebookConstans.h"
+#import "AKFacebookConstants.h"
 
 @interface AKLoginViewController ()
 @property (nonatomic, readonly) AKLoginView    *rootView;

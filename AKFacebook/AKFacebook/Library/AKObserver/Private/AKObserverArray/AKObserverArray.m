@@ -43,21 +43,27 @@
 #pragma mark Public
 
 - (void)addHandler:(AKObjectHandler)handler forObject:(id)object {
-    AKObserverObject *observerObject = [AKObserverObject observerObjectWithObject:object handler:handler];
-    [self.handlers addObject:observerObject];
+    @synchronized (self) {
+        AKObserverObject *observerObject = [AKObserverObject observerObjectWithObject:object handler:handler];
+        [self.handlers addObject:observerObject];
+    }
 }
 
 - (void)removeHandlersForObject:(id)object {
-    NSArray *objects = [self.handlersObjects copy];
-    for (AKObserverObject *observerObject in objects) {
-        if (observerObject.object == object) {
-            [self.handlers removeObject:observerObject];
+    @synchronized (self) {
+        NSArray *objects = [self.handlersObjects copy];
+        for (AKObserverObject *observerObject in objects) {
+            if (observerObject.object == object) {
+                [self.handlers removeObject:observerObject];
+            }
         }
     }
 }
 
 - (void)removeAllHandlers {
-    [self.handlers removeAllObjects];
+    @synchronized (self) {
+        [self.handlers removeAllObjects];
+    }
 }
 
 @end

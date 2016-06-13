@@ -9,8 +9,8 @@
 #ifndef AKFacebookConstans_h
 #define AKFacebookConstans_h
 
-#define kAKFriendsRequestParameters @{@"fields":@"friends{id,first_name,last_name,gender,friends,picture}",}
-#define kAKUserRequestParameters @{@"fields": @"id,first_name,last_name,gender,picture",}
+#define kAKFriendsRequestParameters @{@"fields":@"friends{id,first_name,last_name,friends,picture}",}
+#define kAKUserRequestParameters @{@"fields":@"id,first_name,last_name,gender,picture",}
 
 #define kAKFacebookPermissions @[@"public_profile", @"user_friends"]
 

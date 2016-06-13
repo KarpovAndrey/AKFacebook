@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AKCustomViewController.h"
+
 @class AKUser;
 
-@interface AKFriendsDetailViewController : UIViewController
+@interface AKFriendsDetailViewController : AKCustomViewController
 @property (nonatomic, strong) AKUser *user;
 
 @end

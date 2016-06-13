@@ -6,12 +6,8 @@
 //  Copyright © 2016 Admin. All rights reserved.
 //
 
-#import "AKModel.h"
+#import "AKContext.h"
 
-@class AKUser;
-
-@interface AKFriendsContext : AKModel
-
-- (instancetype)initWithUserID:(NSString *)userID;
+@interface AKFriendsContext : AKContext
 
 @end
