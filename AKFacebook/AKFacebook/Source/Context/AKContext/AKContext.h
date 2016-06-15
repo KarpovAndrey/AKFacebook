@@ -11,8 +11,13 @@
 @class AKUser;
 
 @interface AKContext : AKModel
-@property (nonatomic, strong)   AKUser  *user;
+@property (nonatomic, strong)       AKUser          *user;
+@property (nonatomic, readonly)     NSDictionary    *requestParameters;
 
 - (instancetype)initWithUser:(AKUser *)user;
+
+//these methods are called in subclasses
+//you should never call these method directly from outside subclasses
+- (void)parseData:(NSDictionary *)result;
 
 @end

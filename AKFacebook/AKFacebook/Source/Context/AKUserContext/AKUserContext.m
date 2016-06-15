@@ -22,7 +22,7 @@
 #pragma mark -
 #pragma mark Public
 
-- (void)performWorkingWithResult:(id)result {
+- (void)parseData:(NSDictionary *)result {
     AKUser *user = self.user;
     user.gender = [result valueForKeyPath:kAKGenderKey];
     

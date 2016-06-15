@@ -24,7 +24,8 @@
     AKLoginViewController *viewController = [AKLoginViewController new];
     UINavigationController *controller = [[UINavigationController alloc]
                                           initWithRootViewController:viewController];
-    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor grayColor]];
+
     window.rootViewController = controller;
     [window makeKeyAndVisible];
     

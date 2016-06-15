@@ -9,7 +9,7 @@
 #import "AKView.h"
 #import "AKLoadingView.h"
 
-static CGFloat const kAKDefaultAnimateDuration  = 1.0;
+static CGFloat const kAKDefaultAnimateDuration  = 0.3;
 static CGFloat const kAKDefaultLoadingAlpha     = 0.9;
 static CGFloat const kAKDefaultRemovingAlpha    = 0.2;
 

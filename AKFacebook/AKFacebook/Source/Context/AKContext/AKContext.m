@@ -12,13 +12,6 @@
 #import "AKFacebookConstants.h"
 #import "AKUser.h"
 
-@interface AKContext ()
-@property (nonatomic, readonly)    NSDictionary     *requestParameters;
-
-- (void)performWorkingWithResult:(NSDictionary *)result;
-
-@end
-
 @implementation AKContext
 
 #pragma mark -
@@ -36,7 +29,7 @@
 #pragma mark -
 #pragma mark Private
 
-- (void)performWorkingWithResult:(NSDictionary *)result {
+- (void)parseData:(NSDictionary *)result {
     
 }
 
@@ -54,7 +47,7 @@
                                           NSDictionary *result,
                                           NSError *error)
     {
-        [self performWorkingWithResult:result];
+        [self parseData:result];
     }];
 }
 

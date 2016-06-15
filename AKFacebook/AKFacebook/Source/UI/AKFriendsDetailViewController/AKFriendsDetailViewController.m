@@ -11,7 +11,8 @@
 #import "AKUserContext.h"
 #import "AKUser.h"
 
-static NSString * const kAKNavigationItemTitle = @"FRIEND DETAIL";
+static NSString * const kAKNavigationItemTitle  = @"FRIEND DETAIL";
+static NSString * const kAKLoadingViewMessage   = @"Show must go on";
 
 @interface AKFriendsDetailViewController ()
 @property (nonatomic, readonly) AKFriendsDetailView       *rootView;
@@ -22,6 +23,15 @@ static NSString * const kAKNavigationItemTitle = @"FRIEND DETAIL";
 @end
 
 @implementation AKFriendsDetailViewController
+
+#pragma mark -
+#pragma mark View LifeCycle
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.rootView showLoadingViewWithMessage:kAKLoadingViewMessage animated:YES];
+}
 
 #pragma mark -
 #pragma mark Accessors

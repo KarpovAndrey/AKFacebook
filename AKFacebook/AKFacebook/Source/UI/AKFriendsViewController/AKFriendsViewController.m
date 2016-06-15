@@ -17,16 +17,14 @@
 #import "AKLoadingView.h"
 #import "AKFriendsViewCell.h"
 
-static NSString * const kAKLoadingViewMessage = @"Loading...";
-static NSString * const kAKNavigationItemTitle = @"FRIENDS";
+static NSString * const kAKLoadingViewMessage   = @"Loading...";
+static NSString * const kAKNavigationItemTitle  = @"FRIENDS";
 
 @interface AKFriendsViewController ()
 @property (nonatomic, strong)       AKFriendsContext    *context;
 @property (nonatomic, strong)       NSArray             *friends;
 @property (nonatomic, readonly)     AKFriendsView       *rootView;
 @property (nonatomic, strong)       AKLoadingView       *loadingView;
-
-- (void)load;
 
 @end
 
@@ -38,6 +36,7 @@ static NSString * const kAKNavigationItemTitle = @"FRIENDS";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self.rootView showLoadingViewWithMessage:kAKLoadingViewMessage animated:YES];
     self.context = [[AKFriendsContext alloc] initWithUser:_user];
 }
 
@@ -62,11 +61,20 @@ AKRootViewAndReturnIfNil(AKFriendsView);
         [_context addHandler:^(NSArray *friends) {
             AKStrongifyAndReturnIfNil(AKFriendsViewController)
             strongSelf.friends = friends;
-            [strongSelf load];
         }forState:kAKModelLoadedState
             object:self];
         
         [_context load];
+    }
+}
+
+- (void)setFriends:(NSArray *)friends {
+    if (_friends != friends) {
+        _friends = friends;
+        
+        AKFriendsView *rootView = self.rootView;
+        [rootView.tableView reloadData];
+        [rootView removeLoadingViewAnimated:YES];
     }
 }
 
@@ -97,15 +105,6 @@ AKRootViewAndReturnIfNil(AKFriendsView);
     AKFriendsDetailViewController *controller = [AKFriendsDetailViewController new];
     controller.user = self.friends[indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
-}
-
-#pragma mark -
-#pragma mark Private
-
-- (void)load {
-    AKFriendsView *rootView = self.rootView;
-    [rootView.tableView reloadData];
-    [rootView removeLoadingViewAnimated:YES];
 }
 
 @end

@@ -22,7 +22,7 @@
 #pragma mark -
 #pragma mark Public
 
-- (void)performWorkingWithResult:(NSDictionary *)result {
+- (void)parseData:(NSDictionary *)result {
     NSArray *friends = [result valueForKeyPath:kAKFriendsKeyPath];
     NSMutableArray *friendsArray = [NSMutableArray array];
     for (NSDictionary *dictionary in friends) {

@@ -35,7 +35,6 @@
     if (self) {
         self.firstName = [dictionary valueForKey:kAKFirstNameKey];
         self.lastName = [dictionary valueForKey:kAKLastNameKey];
-        self.gender = [dictionary valueForKey:kAKGenderKey];
         self.userID = [dictionary valueForKey:kAKUserIDKey];
         self.pictureURLPath = [dictionary valueForKeyPath:kAKPictureURLKeyPath];
         self.friends = [dictionary valueForKey:kAKFriendsKey];
