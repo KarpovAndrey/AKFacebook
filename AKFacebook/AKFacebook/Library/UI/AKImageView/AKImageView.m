@@ -67,14 +67,14 @@
         
         AKWeakify;
         [_imageModel addHandler:^(UIImage *image){
-            AKStrongifyAndReturnIfNil(AKImageView);
+            AKStrongifyAndReturnIfNil;
             strongSelf.customImageView.image = image;
             [strongSelf.spinner stopAnimating];
         } forState:kAKModelLoadedState
                          object:self];
         
         [_imageModel addHandler:^(UIImage *image){
-            AKStrongifyAndReturnIfNil(AKImageView);
+            AKStrongifyAndReturnIfNil;
             strongSelf.imageModel.URL = strongSelf.URL;
         } forState:kAKModelFailedState
                          object:self];

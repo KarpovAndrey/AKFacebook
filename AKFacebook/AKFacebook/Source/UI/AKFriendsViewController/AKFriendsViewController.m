@@ -17,11 +17,12 @@
 #import "AKLoadingView.h"
 #import "AKFriendsViewCell.h"
 
+#define kAKPurpleColor colorWithRed:.8 green:.8 blue:1 alpha:1
+
 static NSString * const kAKLoadingViewMessage   = @"Loading...";
 static NSString * const kAKNavigationItemTitle  = @"FRIENDS";
 
 @interface AKFriendsViewController ()
-@property (nonatomic, strong)       AKFriendsContext    *context;
 @property (nonatomic, strong)       NSArray             *friends;
 @property (nonatomic, readonly)     AKFriendsView       *rootView;
 @property (nonatomic, strong)       AKLoadingView       *loadingView;
@@ -36,8 +37,9 @@ static NSString * const kAKNavigationItemTitle  = @"FRIENDS";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.rootView showLoadingViewWithMessage:kAKLoadingViewMessage animated:YES];
-    self.context = [[AKFriendsContext alloc] initWithUser:_user];
+    if (self.context.state != kAKModelLoadedState) {
+        [self.rootView showLoadingViewWithMessage:kAKLoadingViewMessage animated:YES];
+    }
 }
 
 #pragma mark -
@@ -46,26 +48,9 @@ static NSString * const kAKNavigationItemTitle  = @"FRIENDS";
 AKRootViewAndReturnIfNil(AKFriendsView);
 
 - (void)setUser:(AKUser *)user {
-    if (_user != user) {
-        _user = user;
-        
-        self.context = [[AKFriendsContext alloc] initWithUser:_user];
-    }
-}
-
-- (void)setContext:(AKFriendsContext *)context {
-    if (_context != context) {
-        _context = context;
-        
-        AKWeakify;
-        [_context addHandler:^(NSArray *friends) {
-            AKStrongifyAndReturnIfNil(AKFriendsViewController)
-            strongSelf.friends = friends;
-        }forState:kAKModelLoadedState
-            object:self];
-        
-        [_context load];
-    }
+    [super setUser:user];
+    
+    self.context = [[AKFriendsContext alloc] initWithUser:user];
 }
 
 - (void)setFriends:(NSArray *)friends {
@@ -96,7 +81,7 @@ AKRootViewAndReturnIfNil(AKFriendsView);
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKFriendsViewCell *cell = [tableView dequeueCellFromNibWithClass:[AKFriendsViewCell class]];
     [cell fillWithModel:self.friends[indexPath.row]];
-    [cell setBackgroundColor:[UIColor colorWithRed:.8 green:.8 blue:1 alpha:1]];
+    [cell setBackgroundColor:[UIColor kAKPurpleColor]];
     
     return cell;
 }
@@ -105,6 +90,13 @@ AKRootViewAndReturnIfNil(AKFriendsView);
     AKFriendsDetailViewController *controller = [AKFriendsDetailViewController new];
     controller.user = self.friends[indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+#pragma mark -
+#pragma mark Public
+
+- (void)userDidLoadWithObject:(NSArray *)friends {
+    self.friends = friends;
 }
 
 @end

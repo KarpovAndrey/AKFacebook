@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
-    <elements/>
+    <entity name="AKUserModel" representedClassName="AKUserModel" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="largePicture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pictureURLPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="smallPicture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AKUserModel" inverseName="friends" inverseEntity="AKUserModel" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AKUserModel" positionX="2320" positionY="-2916" width="128" height="163"/>
+    </elements>
 </model>

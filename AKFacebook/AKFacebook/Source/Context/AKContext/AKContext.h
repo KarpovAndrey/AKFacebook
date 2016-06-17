@@ -16,6 +16,8 @@
 
 - (instancetype)initWithUser:(AKUser *)user;
 
+- (void)cancel;
+
 //these methods are called in subclasses
 //you should never call these method directly from outside subclasses
 - (void)parseData:(NSDictionary *)result;

@@ -77,14 +77,14 @@ AKRootViewAndReturnIfNil(AKUserView);
     AKArrayModel *model = self.arrayModel;
     AKWeakify;
     [model addHandler:^(AKStateModel *object) {
-        AKStrongifyAndReturnIfNil(AKUserViewController);
+        AKStrongifyAndReturnIfNil;
         [strongSelf performChangeWithObject:object];
     }
                    forState:kAKModelChangedState
                     object:self];
     
     [model addHandler:^(AKStateModel *object) {
-        AKStrongifyAndReturnIfNil(AKUserViewController);
+        AKStrongifyAndReturnIfNil;
         AKUserView *view = strongSelf.rootView;
         [view.tableView reloadData];
         [view removeLoadingViewAnimated:YES];

@@ -14,6 +14,7 @@
 #import "AKFriendsViewController.h"
 #import "AKUser.h"
 #import "AKFacebookConstants.h"
+#import "AKUserModel.h"
 
 @interface AKLoginViewController ()
 @property (nonatomic, readonly) AKLoginView    *rootView;

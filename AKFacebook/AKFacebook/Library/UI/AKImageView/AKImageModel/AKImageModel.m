@@ -73,7 +73,10 @@
 }
 
 - (NSString *)fileName {
-    return [[self.URL absoluteString] lastPathComponent];
+    NSArray *paths = [self.URL pathComponents];
+    NSString *fileName = [NSString stringWithFormat:@"%@_%@",paths[paths.count - 2],
+                          [self.URL lastPathComponent]];
+    return fileName;
 }
 
 - (NSString *)path {
@@ -158,7 +161,7 @@
 - (void)completeLoading {
     AKWeakify;
     AKDispatchAsyncOnMainThread(^{
-        AKStrongifyAndReturnIfNil(AKImageModel);
+        AKStrongifyAndReturnIfNil;
         NSUInteger state = strongSelf.image ? kAKModelLoadedState : kAKModelFailedState;
         [strongSelf setState:state withObject:strongSelf.image];
     });

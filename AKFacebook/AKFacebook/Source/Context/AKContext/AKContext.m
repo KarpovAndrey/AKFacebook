@@ -12,6 +12,11 @@
 #import "AKFacebookConstants.h"
 #import "AKUser.h"
 
+@interface AKContext ()
+@property (nonatomic, strong) FBSDKGraphRequestConnection *requestConnection;
+
+@end
+
 @implementation AKContext
 
 #pragma mark -
@@ -43,12 +48,17 @@
                                   initWithGraphPath:path
                                   parameters:self.requestParameters
                                   HTTPMethod:kAKRequestHTTPMethod];
-    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+    self.requestConnection = [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
                                           NSDictionary *result,
                                           NSError *error)
     {
         [self parseData:result];
     }];
 }
+
+- (void)cancel {
+    [self.requestConnection cancel];
+}
+
 
 @end

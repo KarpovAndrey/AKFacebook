@@ -65,6 +65,9 @@
 		84C80D961D0B59AC00A4365F /* AKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D8C1D0B59AC00A4365F /* AKLoginView.m */; };
 		84C80D971D0B59AC00A4365F /* AKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C80D8E1D0B59AC00A4365F /* AKLoginViewController.m */; };
 		84C80D981D0B59AC00A4365F /* AKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C80D8F1D0B59AC00A4365F /* AKLoginViewController.xib */; };
+		84E851FF1D13389400EC75E5 /* AKUserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84E851FD1D13389400EC75E5 /* AKUserModel.xcdatamodeld */; };
+		84E852041D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E852011D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m */; };
+		84E852051D133D6500EC75E5 /* AKUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E852031D133D6500EC75E5 /* AKUserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +180,11 @@
 		84C80D8E1D0B59AC00A4365F /* AKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoginViewController.m; sourceTree = "<group>"; };
 		84C80D8F1D0B59AC00A4365F /* AKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKLoginViewController.xib; sourceTree = "<group>"; };
 		84CCCF4D1D0B5482001A10A7 /* AKFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E851FE1D13389400EC75E5 /* AKUserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AKUserModel.xcdatamodel; sourceTree = "<group>"; };
+		84E852001D133D6500EC75E5 /* AKUserModel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AKUserModel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		84E852011D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AKUserModel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		84E852021D133D6500EC75E5 /* AKUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUserModel.h; sourceTree = "<group>"; };
+		84E852031D133D6500EC75E5 /* AKUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUserModel.m; sourceTree = "<group>"; };
 		8D64EE2CAA465223CE802759 /* Pods-AKFacebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -687,6 +695,7 @@
 		84C80D7C1D0B59AC00A4365F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84E851FC1D13388A00EC75E5 /* AKUserCoreData */,
 				84C80D7D1D0B59AC00A4365F /* AKUser */,
 			);
 			path = Models;
@@ -753,6 +762,18 @@
 				84C80D8C1D0B59AC00A4365F /* AKLoginView.m */,
 			);
 			path = AKLoginView;
+			sourceTree = "<group>";
+		};
+		84E851FC1D13388A00EC75E5 /* AKUserCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				84E851FD1D13389400EC75E5 /* AKUserModel.xcdatamodeld */,
+				84E852001D133D6500EC75E5 /* AKUserModel+CoreDataProperties.h */,
+				84E852011D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m */,
+				84E852021D133D6500EC75E5 /* AKUserModel.h */,
+				84E852031D133D6500EC75E5 /* AKUserModel.m */,
+			);
+			path = AKUserCoreData;
 			sourceTree = "<group>";
 		};
 		D793D474A56B7CAAB0A68E98 /* Pods */ = {
@@ -895,6 +916,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84C80D421D0B535900A4365F /* AKImageModel.m in Sources */,
+				84E851FF1D13389400EC75E5 /* AKUserModel.xcdatamodeld in Sources */,
 				84C80D2D1D0B535900A4365F /* AKObserverArray.m in Sources */,
 				84C80D761D0B594400A4365F /* AKAppDelegate.m in Sources */,
 				84C80D3A1D0B535900A4365F /* AKArrayManager.m in Sources */,
@@ -904,6 +926,7 @@
 				84C80D701D0B58FB00A4365F /* AKClusterAlphabet.m in Sources */,
 				84C80D461D0B535900A4365F /* AKUserView.m in Sources */,
 				84C80D941D0B59AC00A4365F /* AKFriendsViewController.m in Sources */,
+				84E852041D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m in Sources */,
 				84C80D341D0B535900A4365F /* NSString+AKExtensions.m in Sources */,
 				8488C07E1D0C771700132A96 /* AKFriendsViewCell.m in Sources */,
 				84C80D391D0B535900A4365F /* AKArrayModel.m in Sources */,
@@ -912,6 +935,7 @@
 				84C80D331D0B535900A4365F /* NSObject+AKExtensions.m in Sources */,
 				84C80D3C1D0B535900A4365F /* AKSharedCacheModel.m in Sources */,
 				84C80D381D0B535900A4365F /* UIWindow+AKCategory.m in Sources */,
+				84E852051D133D6500EC75E5 /* AKUserModel.m in Sources */,
 				84C80D5F1D0B53AD00A4365F /* main.m in Sources */,
 				84B5CC441D0EF40800B5E9CA /* AKContext.m in Sources */,
 				84C80D371D0B535900A4365F /* UIViewController+AKCategory.m in Sources */,
@@ -1098,6 +1122,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84E851FD1D13389400EC75E5 /* AKUserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84E851FE1D13389400EC75E5 /* AKUserModel.xcdatamodel */,
+			);
+			currentVersion = 84E851FE1D13389400EC75E5 /* AKUserModel.xcdatamodel */;
+			path = AKUserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8439B3B71D0B464E00A0AB73 /* Project object */;
 }

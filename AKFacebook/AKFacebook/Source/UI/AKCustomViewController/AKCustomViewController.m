@@ -8,6 +8,7 @@
 
 #import "AKCustomViewController.h"
 #import "AKView.h"
+#import "AKContext.h"
 
 static NSString * const kAKNavigationItemTitle  = @"TITLE";
 
@@ -38,6 +39,28 @@ static NSString * const kAKNavigationItemTitle  = @"TITLE";
     return kAKNavigationItemTitle;
 }
 
+- (void)setUser:(AKUser *)user {
+    if (_user != user) {
+        _user = user;
+    }
+}
+
+- (void)setContext:(AKContext *)context {
+    if (_context != context) {
+        [_context cancel];
+        _context = context;
+        
+        AKWeakify;
+        [_context addHandler:^(id object) {
+            AKStrongifyAndReturnIfNil
+            [strongSelf userDidLoadWithObject:object];
+        }forState:kAKModelLoadedState
+                      object:self];
+        
+        [_context load];
+    }
+}
+
 #pragma mark -
 #pragma mark Private
 
@@ -62,6 +85,13 @@ static NSString * const kAKNavigationItemTitle  = @"TITLE";
     //    [backButton setImage:[UIImage imageNamed:@"BackButton.png"]  forState:UIControlStateNormal];
     //    [backButton addTarget:self action:@selector(leftButtonClick) forControlEvents:UIControlEventTouchUpInside];
     //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+}
+
+#pragma mark -
+#pragma mark Public
+
+- (void)userDidLoadWithObject:(id)object {
+    
 }
 
 @end

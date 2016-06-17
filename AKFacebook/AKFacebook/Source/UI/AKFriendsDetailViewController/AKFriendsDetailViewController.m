@@ -16,9 +16,6 @@ static NSString * const kAKLoadingViewMessage   = @"Show must go on";
 
 @interface AKFriendsDetailViewController ()
 @property (nonatomic, readonly) AKFriendsDetailView       *rootView;
-@property (nonatomic, strong)   AKUserContext             *context;
-
-- (void)load;
 
 @end
 
@@ -39,27 +36,9 @@ static NSString * const kAKLoadingViewMessage   = @"Show must go on";
 AKRootViewAndReturnIfNil(AKFriendsDetailView);
 
 - (void)setUser:(AKUser *)user {
-    if (_user != user) {
-        _user = user;
-        
-        self.context = [[AKUserContext alloc] initWithUser:_user];
-    }
-}
-
-- (void)setContext:(AKUserContext *)context {
-    if (_context != context) {
-        _context = context;
-        
-        AKWeakify;
-        [_context addHandler:^(AKUser *user) {
-            AKStrongifyAndReturnIfNil(AKFriendsDetailViewController)
-            strongSelf.user = user;
-            [strongSelf load];
-        }forState:kAKModelLoadedState
-                      object:self];
-        
-        [_context load];
-    }
+    [super setUser:user];
+    
+    self.context = [[AKUserContext alloc] initWithUser:user];
 }
 
 - (NSString *)navigationItemTitle {
@@ -69,10 +48,10 @@ AKRootViewAndReturnIfNil(AKFriendsDetailView);
 #pragma mark -
 #pragma mark Private
 
-- (void)load {
+- (void)userDidLoadWithObject:(AKUser *)user {
+    self.user = user;
     AKFriendsDetailView *rootView = self.rootView;
     [rootView fillWithModel:self.user];
-    [rootView removeLoadingViewAnimated:YES];
-}
+    [rootView removeLoadingViewAnimated:YES];}
 
 @end

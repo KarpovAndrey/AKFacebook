@@ -4,7 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ActiveRecordKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CommonKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DataKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,10 +44,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0C1F8E331232C34F034FD26C684AFA0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>129AD0ECD9AE3E8034E3AC52A5DB7C09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1959416FB1ED88BD4A2800A1BC1B05BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>514771033D0C341F0ABDA1831E7132B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,12 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>760E8F2A62EA4040ED66A31ADD5C5AC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7E61C9A8C176278C6C99C2C59E9C152E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2DB493FA65EF59D12E7136408B437C1</key>
+		<key>86ADE1A2BF10EFDB17FA0D432156D62D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

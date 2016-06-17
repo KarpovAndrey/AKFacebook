@@ -53,7 +53,7 @@
     
     AKWeakify;
     AKDispatchAsyncInBackground(^{
-        AKStrongifyAndReturnIfNil(AKModel);
+        AKStrongifyAndReturnIfNil;
         [strongSelf prepareToLoading];
         AKDispatchAsyncOnMainThread(^{
             [strongSelf finishLoading];

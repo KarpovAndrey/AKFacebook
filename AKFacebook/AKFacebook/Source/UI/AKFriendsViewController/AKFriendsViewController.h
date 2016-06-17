@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AKCustomViewController.h"
 
-@class AKUser;
-
 @interface AKFriendsViewController : AKCustomViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) AKUser    *user;
 
 @end
