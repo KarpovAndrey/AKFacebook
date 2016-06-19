@@ -7,16 +7,19 @@
 //
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "IDPActiveRecordKit.h"
 
 #import "AKAppDelegate.h"
 #import "AKLoginViewController.h"
-
+#import "AKCoreDataConstants.h"
 @implementation AKAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+    
+    [IDPCoreDataManager sharedManagerWithMomName:kAKMomName];
     
     UIWindow *window = [UIWindow window];
     self.window = window;

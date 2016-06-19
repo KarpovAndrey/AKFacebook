@@ -23,6 +23,7 @@ static NSString * const kAKGenderKey          = @"gender";
 static NSString * const kAKUserIDKey          = @"id";
 static NSString * const kAKPictureURLKeyPath  = @"picture.data.url";
 static NSString * const kAKFriendsKey         = @"friends";
+static NSString * const kAKDataKey            = @"data";
 
 static NSString * const kAKLargePictureURL    = @"https://graph.facebook.com/%@/picture?type=large";
 static NSString * const kAKSmallPictureURL    = @"https://graph.facebook.com/%@/picture?type=small";

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6DB752C4AAF29BB42A7AF9CC /* libPods-AKFacebook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 380FF09F7B0D06B1744C1FB6 /* libPods-AKFacebook.a */; };
+		843F9A271D173FB10012B7F6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843F9A261D173FB10012B7F6 /* QuartzCore.framework */; };
 		8488C0211D0C62FD00132A96 /* AKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488C01D1D0C62FD00132A96 /* AKLoadingView.m */; };
 		8488C0221D0C62FD00132A96 /* AKLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8488C01E1D0C62FD00132A96 /* AKLoadingView.xib */; };
 		8488C0231D0C62FD00132A96 /* AKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488C0201D0C62FD00132A96 /* AKView.m */; };
@@ -17,6 +18,7 @@
 		8488C0821D0C7B8900132A96 /* 1406958748.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488C0811D0C7B8900132A96 /* 1406958748.jpg */; };
 		84B5CC441D0EF40800B5E9CA /* AKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5CC431D0EF40800B5E9CA /* AKContext.m */; };
 		84B5CC481D0F126800B5E9CA /* AKCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5CC471D0F126800B5E9CA /* AKCustomViewController.m */; };
+		84B91D241D154D1F0008FCF3 /* AKManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B91D231D154D1F0008FCF3 /* AKManagedObject.m */; };
 		84BA09821D0D78B70034E996 /* AKFriendsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA09811D0D78B70034E996 /* AKFriendsDetailView.m */; };
 		84BA09861D0DC61F0034E996 /* AKUserContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA09851D0DC61F0034E996 /* AKUserContext.m */; };
 		84C36BA11D0C27AD004B1443 /* iOS Study Plan.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84C36BA01D0C27AD004B1443 /* iOS Study Plan.txt */; };
@@ -73,6 +75,7 @@
 /* Begin PBXFileReference section */
 		0D0A0CFFCF56A803D0355A85 /* Pods-AKFacebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.debug.xcconfig"; sourceTree = "<group>"; };
 		380FF09F7B0D06B1744C1FB6 /* libPods-AKFacebook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AKFacebook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		843F9A261D173FB10012B7F6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8488C01C1D0C62FD00132A96 /* AKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLoadingView.h; sourceTree = "<group>"; };
 		8488C01D1D0C62FD00132A96 /* AKLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLoadingView.m; sourceTree = "<group>"; };
 		8488C01E1D0C62FD00132A96 /* AKLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKLoadingView.xib; sourceTree = "<group>"; };
@@ -84,11 +87,14 @@
 		8488C07C1D0C771700132A96 /* AKFriendsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsViewCell.m; sourceTree = "<group>"; };
 		8488C07D1D0C771700132A96 /* AKFriendsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKFriendsViewCell.xib; sourceTree = "<group>"; };
 		8488C0811D0C7B8900132A96 /* 1406958748.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1406958748.jpg; sourceTree = "<group>"; };
-		84B5CC401D0EF2FF00B5E9CA /* AKFacebookConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFacebookConstants.h; sourceTree = "<group>"; };
 		84B5CC421D0EF40800B5E9CA /* AKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKContext.h; sourceTree = "<group>"; };
 		84B5CC431D0EF40800B5E9CA /* AKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKContext.m; sourceTree = "<group>"; };
 		84B5CC461D0F126800B5E9CA /* AKCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCustomViewController.h; sourceTree = "<group>"; };
 		84B5CC471D0F126800B5E9CA /* AKCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCustomViewController.m; sourceTree = "<group>"; };
+		84B91D221D154D1F0008FCF3 /* AKManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKManagedObject.h; sourceTree = "<group>"; };
+		84B91D231D154D1F0008FCF3 /* AKManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKManagedObject.m; sourceTree = "<group>"; };
+		84B91D271D1559080008FCF3 /* AKFacebookConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKFacebookConstants.h; sourceTree = "<group>"; };
+		84B91D281D1559B80008FCF3 /* AKCoreDataConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCoreDataConstants.h; sourceTree = "<group>"; };
 		84BA09801D0D78B70034E996 /* AKFriendsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFriendsDetailView.h; sourceTree = "<group>"; };
 		84BA09811D0D78B70034E996 /* AKFriendsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFriendsDetailView.m; sourceTree = "<group>"; };
 		84BA09841D0DC61F0034E996 /* AKUserContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUserContext.h; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843F9A271D173FB10012B7F6 /* QuartzCore.framework in Frameworks */,
 				6DB752C4AAF29BB42A7AF9CC /* libPods-AKFacebook.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +210,7 @@
 		0E3D819031EDD5E31BA2C0C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				843F9A261D173FB10012B7F6 /* QuartzCore.framework */,
 				380FF09F7B0D06B1744C1FB6 /* libPods-AKFacebook.a */,
 			);
 			name = Frameworks;
@@ -282,6 +290,15 @@
 				84B5CC471D0F126800B5E9CA /* AKCustomViewController.m */,
 			);
 			path = AKCustomViewController;
+			sourceTree = "<group>";
+		};
+		84B91D211D154D070008FCF3 /* AKManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				84B91D221D154D1F0008FCF3 /* AKManagedObject.h */,
+				84B91D231D154D1F0008FCF3 /* AKManagedObject.m */,
+			);
+			path = AKManagedObject;
 			sourceTree = "<group>";
 		};
 		84BA097F1D0D789D0034E996 /* AKFriendsDetailView */ = {
@@ -622,6 +639,7 @@
 				84C80D731D0B594400A4365F /* AKAppDelegate */,
 				84C80D541D0B53AD00A4365F /* Assets.xcassets */,
 				84C80D551D0B53AD00A4365F /* LaunchScreen.storyboard */,
+				84B91D271D1559080008FCF3 /* AKFacebookConstants.h */,
 				84C80D631D0B57B500A4365F /* FacebookProjectPrefix.pch */,
 				84C80D571D0B53AD00A4365F /* Main.storyboard */,
 				84C80D591D0B53AD00A4365F /* Info.plist */,
@@ -665,7 +683,6 @@
 		84C80D771D0B59AC00A4365F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				84B5CC401D0EF2FF00B5E9CA /* AKFacebookConstants.h */,
 				84C80D781D0B59AC00A4365F /* Context */,
 				84C80D7C1D0B59AC00A4365F /* Models */,
 				84C80D801D0B59AC00A4365F /* UI */,
@@ -767,6 +784,8 @@
 		84E851FC1D13388A00EC75E5 /* AKUserCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				84B91D281D1559B80008FCF3 /* AKCoreDataConstants.h */,
+				84B91D211D154D070008FCF3 /* AKManagedObject */,
 				84E851FD1D13389400EC75E5 /* AKUserModel.xcdatamodeld */,
 				84E852001D133D6500EC75E5 /* AKUserModel+CoreDataProperties.h */,
 				84E852011D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m */,
@@ -963,6 +982,7 @@
 				84C80D2E1D0B535900A4365F /* AKObserverDictionary.m in Sources */,
 				84C80D721D0B58FB00A4365F /* AKStringAlphabet.m in Sources */,
 				8488C0231D0C62FD00132A96 /* AKView.m in Sources */,
+				84B91D241D154D1F0008FCF3 /* AKManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,7 +1045,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1063,7 +1083,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1078,7 +1098,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AKFacebook/SupportingFiles/FacebookProjectPrefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/AKFacebook/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AK.AKFacebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1093,7 +1113,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AKFacebook/SupportingFiles/FacebookProjectPrefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/AKFacebook/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AK.AKFacebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";

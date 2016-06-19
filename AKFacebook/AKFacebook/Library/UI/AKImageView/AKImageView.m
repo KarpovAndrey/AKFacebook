@@ -68,8 +68,8 @@
         AKWeakify;
         [_imageModel addHandler:^(UIImage *image){
             AKStrongifyAndReturnIfNil;
-            strongSelf.customImageView.image = image;
             [strongSelf.spinner stopAnimating];
+            strongSelf.customImageView.image = image;
         } forState:kAKModelLoadedState
                          object:self];
         

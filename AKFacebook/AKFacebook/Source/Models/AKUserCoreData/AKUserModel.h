@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "AKManagedObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AKUserModel : NSManagedObject
 
-// Insert code here to declare functionality of your managed object subclass
+@interface AKUserModel : AKManagedObject
+@property (nonatomic, assign) BOOL                wasLogged;
 
 @end
 

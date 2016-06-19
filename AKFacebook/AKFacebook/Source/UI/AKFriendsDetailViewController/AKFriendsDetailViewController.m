@@ -6,10 +6,12 @@
 //  Copyright © 2016 Admin. All rights reserved.
 //
 
+#import "IDPActiveRecordKit.h"
+
 #import "AKFriendsDetailViewController.h"
 #import "AKFriendsDetailView.h"
 #import "AKUserContext.h"
-#import "AKUser.h"
+#import "AKUserModel.h"
 
 static NSString * const kAKNavigationItemTitle  = @"FRIEND DETAIL";
 static NSString * const kAKLoadingViewMessage   = @"Show must go on";
@@ -35,7 +37,7 @@ static NSString * const kAKLoadingViewMessage   = @"Show must go on";
 
 AKRootViewAndReturnIfNil(AKFriendsDetailView);
 
-- (void)setUser:(AKUser *)user {
+- (void)setUser:(AKUserModel *)user {
     [super setUser:user];
     
     self.context = [[AKUserContext alloc] initWithUser:user];
@@ -48,10 +50,22 @@ AKRootViewAndReturnIfNil(AKFriendsDetailView);
 #pragma mark -
 #pragma mark Private
 
-- (void)userDidLoadWithObject:(AKUser *)user {
+- (void)userDidLoadWithObject:(AKUserModel *)user {
+    [user saveManagedObject];
+
     self.user = user;
     AKFriendsDetailView *rootView = self.rootView;
     [rootView fillWithModel:self.user];
-    [rootView removeLoadingViewAnimated:YES];}
+    [rootView removeLoadingViewAnimated:YES];
+}
+
+- (void)userDidFail:(AKUserModel *)user {
+    [super userDidFail:user];
+    
+    self.user = user;
+    AKFriendsDetailView *rootView = self.rootView;
+    [rootView fillWithModel:self.user];
+    [rootView removeLoadingViewAnimated:YES];
+}
 
 @end

@@ -10,7 +10,7 @@
 
 #import "AKContext.h"
 #import "AKFacebookConstants.h"
-#import "AKUser.h"
+#import "AKUserModel.h"
 
 @interface AKContext ()
 @property (nonatomic, strong) FBSDKGraphRequestConnection *requestConnection;
@@ -22,7 +22,7 @@
 #pragma mark -
 #pragma mark Initialization & Deallocation
 
-- (instancetype)initWithUser:(AKUser *)user {
+- (instancetype)initWithUser:(AKUserModel *)user {
     self = [super init];
     if (self) {
         self.user = user;
@@ -42,7 +42,7 @@
 #pragma mark Public
 
 - (void)setupLoad {
-    NSString *path = [NSString stringWithFormat:@"/%@", self.user.userID];
+    NSString *path = [NSString stringWithFormat:@"/%@", self.user.ID];
 
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
                                   initWithGraphPath:path

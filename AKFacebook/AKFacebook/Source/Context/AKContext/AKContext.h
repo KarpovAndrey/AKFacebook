@@ -8,13 +8,13 @@
 
 #import "AKModel.h"
 
-@class AKUser;
+@class AKUserModel;
 
 @interface AKContext : AKModel
-@property (nonatomic, strong)       AKUser          *user;
+@property (nonatomic, strong)       AKUserModel          *user;
 @property (nonatomic, readonly)     NSDictionary    *requestParameters;
 
-- (instancetype)initWithUser:(AKUser *)user;
+- (instancetype)initWithUser:(AKUserModel *)user;
 
 - (void)cancel;
 

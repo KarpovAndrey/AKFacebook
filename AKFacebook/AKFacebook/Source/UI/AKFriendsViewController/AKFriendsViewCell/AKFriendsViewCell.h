@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class AKImageView;
-@class AKUser;
+@class AKUserModel;
 
 @interface AKFriendsViewCell : UITableViewCell
 @property (nonatomic, strong) IBOutlet UILabel        *cellLabel;
 @property (nonatomic, strong) IBOutlet AKImageView    *customImageView;
 
-- (void)fillWithModel:(AKUser *)user;
+- (void)fillWithModel:(AKUserModel *)user;
 
 @end

@@ -9,13 +9,13 @@
 #import "AKView.h"
 
 @class AKImageView;
-@class AKUser;
+@class AKUserModel;
 
 @interface AKFriendsDetailView : AKView
 @property (nonatomic, strong) IBOutlet  UILabel     *nameLabel;
 @property (nonatomic, strong) IBOutlet  UILabel     *genderLabel;
 @property (nonatomic, strong) IBOutlet  AKImageView *userImage;
 
-- (void)fillWithModel:(AKUser *)user;
+- (void)fillWithModel:(AKUserModel *)user;
 
 @end

@@ -9,8 +9,13 @@
 #import "AKCustomViewController.h"
 #import "AKView.h"
 #import "AKContext.h"
+#import "AKUserModel.h"
 
 static NSString * const kAKNavigationItemTitle  = @"TITLE";
+
+static NSString * const kAKAllertControllerTitle    = @"No Interner Connection";
+static NSString * const kAKAllertControllerMessage  = @"Make sure your device is connected to the internet";
+static NSString * const kAKActionTitle              = @"OK";
 
 @interface AKCustomViewController ()
 @property (nonatomic, readonly) NSString    *loadingViewMessage;
@@ -39,7 +44,7 @@ static NSString * const kAKNavigationItemTitle  = @"TITLE";
     return kAKNavigationItemTitle;
 }
 
-- (void)setUser:(AKUser *)user {
+- (void)setUser:(AKUserModel *)user {
     if (_user != user) {
         _user = user;
     }
@@ -55,6 +60,14 @@ static NSString * const kAKNavigationItemTitle  = @"TITLE";
             AKStrongifyAndReturnIfNil
             [strongSelf userDidLoadWithObject:object];
         }forState:kAKModelLoadedState
+                      object:self];
+        
+        [_context load];
+        
+        [_context addHandler:^(id object) {
+            AKStrongifyAndReturnIfNil
+            [strongSelf userDidFail:object];
+        }forState:kAKModelFailedState
                       object:self];
         
         [_context load];
@@ -79,8 +92,6 @@ static NSString * const kAKNavigationItemTitle  = @"TITLE";
                                                                             target:self
                                                                             action:@selector(leftButtonClick)];;
     
-    
-    
     //    UIButton *backButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 54.0f, 30.0f)];
     //    [backButton setImage:[UIImage imageNamed:@"BackButton.png"]  forState:UIControlStateNormal];
     //    [backButton addTarget:self action:@selector(leftButtonClick) forControlEvents:UIControlEventTouchUpInside];
@@ -92,6 +103,19 @@ static NSString * const kAKNavigationItemTitle  = @"TITLE";
 
 - (void)userDidLoadWithObject:(id)object {
     
+}
+
+- (void)userDidFail:(id)object {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:kAKAllertControllerTitle
+                                                                   message:kAKAllertControllerMessage
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:kAKActionTitle style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

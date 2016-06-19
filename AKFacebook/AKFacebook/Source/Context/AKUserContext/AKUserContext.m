@@ -7,7 +7,7 @@
 //
 
 #import "AKUserContext.h"
-#import "AKUser.h"
+#import "AKUserModel.h"
 #import "AKFacebookConstants.h"
 
 @implementation AKUserContext
@@ -23,9 +23,9 @@
 #pragma mark Public
 
 - (void)parseData:(NSDictionary *)result {
-    AKUser *user = self.user;
+    AKUserModel *user = self.user;
     user.gender = [result valueForKeyPath:kAKGenderKey];
-    
+
     [self setState:kAKModelLoadedState withObject:user];
 }
 

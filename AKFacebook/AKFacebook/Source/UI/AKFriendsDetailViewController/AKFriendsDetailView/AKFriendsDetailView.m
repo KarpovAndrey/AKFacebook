@@ -7,7 +7,7 @@
 //
 
 #import "AKFriendsDetailView.h"
-#import "AKUser.h"
+#import "AKUserModel.h"
 #import "AKImageView.h"
 
 @implementation AKFriendsDetailView
@@ -15,7 +15,7 @@
 #pragma mark -
 #pragma mark Public
 
-- (void)fillWithModel:(AKUser *)user {
+- (void)fillWithModel:(AKUserModel *)user {
     NSString *name = [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
     self.nameLabel.text = name;
     self.genderLabel.text = user.gender;

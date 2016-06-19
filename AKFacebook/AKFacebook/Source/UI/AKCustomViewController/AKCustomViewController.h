@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class AKUser;
+@class AKUserModel;
 @class AKContext;
 
 @interface AKCustomViewController : UIViewController
-@property (nonatomic, strong)       AKUser *user;
-@property (nonatomic, strong)       AKContext    *context;
+@property (nonatomic, strong)       AKUserModel     *user;
+@property (nonatomic, strong)       AKContext       *context;
 
 - (void)userDidLoadWithObject:(id)object;
+- (void)userDidFail:(id)object;
 
 @end
