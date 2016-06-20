@@ -54,7 +54,8 @@ static NSString * const kAKActionTitle              = @"OK";
     if (_context != context) {
         [_context cancel];
         _context = context;
-        
+        [_context load];
+
         AKWeakify;
         [_context addHandler:^(id object) {
             AKStrongifyAndReturnIfNil
@@ -62,15 +63,12 @@ static NSString * const kAKActionTitle              = @"OK";
         }forState:kAKModelLoadedState
                       object:self];
         
-        [_context load];
-        
         [_context addHandler:^(id object) {
             AKStrongifyAndReturnIfNil
             [strongSelf userDidFail:object];
         }forState:kAKModelFailedState
                       object:self];
         
-        [_context load];
     }
 }
 

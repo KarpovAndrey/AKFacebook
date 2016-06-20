@@ -25,7 +25,10 @@ static NSString * const kAKAllertControllerMessage  = @"you have entered an inco
 static NSString * const kAKActionTitle              = @"OK";
 
 @interface AKLoginViewController ()
-@property (nonatomic, readonly) AKLoginView    *rootView;
+@property (nonatomic, readonly) AKLoginView             *rootView;
+@property (nonatomic, strong)   AKFriendsViewController *friendsViewController;
+
+- (void)showAlert;
 
 @end
 
@@ -35,6 +38,17 @@ static NSString * const kAKActionTitle              = @"OK";
 #pragma mark Accessors
 
 AKRootViewAndReturnIfNil(AKLoginView);
+
+- (void)setUser:(AKUserModel *)user {
+    if (_user != user) {
+        _user = user;
+        
+        _user.wasLogged = YES;
+        AKFriendsViewController *controller = self.friendsViewController;
+        controller.user = user;
+        [self.navigationController pushViewController:controller animated:NO];
+    }
+}
 
 #pragma mark -
 #pragma mark View LifeCycle
@@ -49,34 +63,40 @@ AKRootViewAndReturnIfNil(AKLoginView);
 #pragma mark Handling Interrface
 
 - (IBAction)onClickLoginButton:(id)sender {
-    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-    [login logOut];
+    self.friendsViewController = [AKFriendsViewController new];
+
+    FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
+    if (token) {
+        self.user = [AKUserModel objectWithID:token.userID];
+    } else {
+        FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+        [login
+         logInWithReadPermissions:kAKFacebookPermissions
+         fromViewController:self
+         handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+             if (!error && !result.isCancelled) {
+                 self.user = [AKUserModel objectWithID:result.token.userID];
+             } else {
+                 [self showAlert];
+             }
+         }];
+    }
+}
+
+#pragma mark -
+#pragma mark Private
+
+- (void)showAlert {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:kAKAllertControllerTitle
+                                                                   message:kAKAllertControllerMessage
+                                                            preferredStyle:UIAlertControllerStyleAlert];
     
-    [login
-     logInWithReadPermissions:kAKFacebookPermissions
-     fromViewController:self
-     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-         if (!error && !result.isCancelled) {
-             NSLog(@"Logged in");
-             AKFriendsViewController *controller = [AKFriendsViewController new];
-             controller.user = [AKUserModel objectWithID:result.token.userID];
-             controller.user.wasLogged = YES;
-             [controller.user saveManagedObject];
-             [self.navigationController pushViewController:controller animated:NO];
-         } else {
-             NSLog(@"Not logged in");
-             UIAlertController* alert = [UIAlertController alertControllerWithTitle:kAKAllertControllerTitle
-                                                                            message:kAKAllertControllerMessage
-                                                                     preferredStyle:UIAlertControllerStyleAlert];
-             
-             UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:kAKActionTitle style:UIAlertActionStyleCancel
-                                                                   handler:^(UIAlertAction * action) {
-                                                                   }];
-             
-             [alert addAction:defaultAction];
-             [self presentViewController:alert animated:YES completion:nil];
-         }
-     }];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:kAKActionTitle style:UIAlertActionStyleCancel
+                                                          handler:^(UIAlertAction * action) {
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

@@ -48,11 +48,16 @@
                                   initWithGraphPath:path
                                   parameters:self.requestParameters
                                   HTTPMethod:kAKRequestHTTPMethod];
+    
     self.requestConnection = [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
                                           NSDictionary *result,
                                           NSError *error)
     {
-        [self parseData:result];
+        if (!error) {
+            [self parseData:result];
+        } else {
+            [self setState:kAKModelFailedState withObject:self.user.friends];
+        }
     }];
 }
 

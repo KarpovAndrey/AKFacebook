@@ -87,7 +87,7 @@ AKRootViewAndReturnIfNil(AKFriendsView);
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKFriendsViewCell *cell = [tableView dequeueCellFromNibWithClass:[AKFriendsViewCell class]];
     [cell fillWithModel:self.friends[indexPath.row]];
-    [cell setBackgroundColor:[UIColor kAKPurpleColor]];
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }
@@ -107,8 +107,9 @@ AKRootViewAndReturnIfNil(AKFriendsView);
     [self.user saveManagedObject];
 }
 
-- (void)userDidFail:(id)object {
-    [super userDidFail:object];
+- (void)userDidFail:(AKUserModel *)user {
+    [super userDidFail:user];
+    
 }
 
 #pragma mark -

@@ -52,8 +52,6 @@ AKRootViewAndReturnIfNil(AKFriendsDetailView);
 
 - (void)userDidLoadWithObject:(AKUserModel *)user {
     [user saveManagedObject];
-
-    self.user = user;
     AKFriendsDetailView *rootView = self.rootView;
     [rootView fillWithModel:self.user];
     [rootView removeLoadingViewAnimated:YES];
@@ -62,7 +60,6 @@ AKRootViewAndReturnIfNil(AKFriendsDetailView);
 - (void)userDidFail:(AKUserModel *)user {
     [super userDidFail:user];
     
-    self.user = user;
     AKFriendsDetailView *rootView = self.rootView;
     [rootView fillWithModel:self.user];
     [rootView removeLoadingViewAnimated:YES];

@@ -16,6 +16,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallpaper2" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-en-m5J">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHx-ib-166" userLabel="UserView" customClass="AKImageView">
                     <rect key="frame" x="60" y="72" width="200" height="200"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,8 +65,8 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.033356600038293098" green="0.66183894230769225" blue="0.64319901940796176" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="UEU-en-m5J" secondAttribute="trailing" id="1kR-6H-gyy"/>
                 <constraint firstItem="pci-j1-uRK" firstAttribute="top" secondItem="p0r-Fs-yhN" secondAttribute="top" id="2rk-25-Ak4"/>
                 <constraint firstItem="Wx1-DX-SfM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="6Wa-qB-ti3"/>
                 <constraint firstItem="Flo-AQ-Dab" firstAttribute="trailing" secondItem="p0r-Fs-yhN" secondAttribute="trailing" id="87n-XY-4eH"/>
@@ -75,6 +78,9 @@
                 <constraint firstItem="Wx1-DX-SfM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="280" id="NFq-Ca-v5a"/>
                 <constraint firstItem="Wx1-DX-SfM" firstAttribute="baseline" secondItem="Flo-AQ-Dab" secondAttribute="baseline" id="Ui6-bl-nKw"/>
                 <constraint firstItem="pci-j1-uRK" firstAttribute="top" secondItem="Wx1-DX-SfM" secondAttribute="bottom" constant="1" id="XJ2-D8-F05"/>
+                <constraint firstItem="UEU-en-m5J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XOq-4O-B6i"/>
+                <constraint firstAttribute="bottom" secondItem="UEU-en-m5J" secondAttribute="bottom" id="ZrK-cd-HTx"/>
+                <constraint firstItem="UEU-en-m5J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jYp-dh-Rar"/>
                 <constraint firstItem="Flo-AQ-Dab" firstAttribute="leading" secondItem="p0r-Fs-yhN" secondAttribute="leading" id="kHi-Il-75y"/>
                 <constraint firstItem="UHx-ib-166" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pxD-aB-YzR"/>
                 <constraint firstItem="Wx1-DX-SfM" firstAttribute="top" secondItem="Flo-AQ-Dab" secondAttribute="top" id="wOy-mn-Dfu"/>
@@ -89,4 +95,7 @@
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="Wallpaper2" width="320" height="568"/>
+    </resources>
 </document>
