@@ -12,6 +12,7 @@
 @interface AKImageView ()
 @property (nonatomic, strong) UIImageView               *customImageView;
 @property (nonatomic, strong) UIActivityIndicatorView   *spinner;
+@property (nonatomic, assign) UIViewContentMode         contentMode;
 
 @property (nonatomic, readonly, getter=isCached) BOOL cached;
 
@@ -49,9 +50,9 @@
     self.customImageView.backgroundColor = [UIColor clearColor];
     [self addSubview:imageView];
     
-//    CALayer *layer = imageView.layer;
-//    [layer setBorderColor: [[UIColor grayColor] CGColor]];
-//    [layer setBorderWidth: 0.5];
+    CALayer *layer = imageView.layer;
+    [layer setBorderColor: [[UIColor grayColor] CGColor]];
+    [layer setBorderWidth: 0.5];
     self.customImageView = imageView;
 
     [self showSpinner];
@@ -68,8 +69,8 @@
         AKWeakify;
         [_imageModel addHandler:^(UIImage *image){
             AKStrongifyAndReturnIfNil;
-            [strongSelf.spinner stopAnimating];
             strongSelf.customImageView.image = image;
+            [strongSelf.spinner stopAnimating];
         } forState:kAKModelLoadedState
                          object:self];
         
@@ -78,6 +79,14 @@
             strongSelf.imageModel.URL = strongSelf.URL;
         } forState:kAKModelFailedState
                          object:self];
+    }
+}
+
+- (void)setContentMode:(UIViewContentMode)contentMode {
+    if (_contentMode != contentMode) {
+        _contentMode = contentMode;
+        
+        self.customImageView.contentMode = _contentMode;
     }
 }
 
@@ -96,6 +105,7 @@
 - (void)showSpinner {
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
                                         UIActivityIndicatorViewStyleGray];
+    
     UIImageView *imageView = self.customImageView;
     spinner.center = imageView.center;
     [spinner startAnimating];
@@ -107,6 +117,12 @@
 - (void)load {
     [self.spinner startAnimating];
     self.imageModel.URL = self.URL;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.customImageView.frame = self.bounds;
+    self.spinner.center = self.customImageView.center;
 }
 
 #pragma mark -

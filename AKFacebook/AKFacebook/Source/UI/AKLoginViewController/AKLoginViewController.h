@@ -11,7 +11,6 @@
 @class AKUserModel;
 
 @interface AKLoginViewController : UIViewController
-@property (nonatomic, strong) AKUserModel *user;
 
 - (IBAction)onClickLoginButton:(id)sender;
 

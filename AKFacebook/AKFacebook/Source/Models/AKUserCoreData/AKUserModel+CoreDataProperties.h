@@ -2,7 +2,7 @@
 //  AKUserModel+CoreDataProperties.h
 //  AKFacebook
 //
-//  Created by Admin on 18.06.16.
+//  Created by Admin on 22.06.16.
 //  Copyright © 2016 Karpov Andrey. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -10,6 +10,7 @@
 //
 
 #import "AKUserModel.h"
+#import "AKUserImage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,10 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString                *pictureURLPath;
 @property (nullable, nonatomic, retain) NSString                *smallPicture;
 @property (nullable, nonatomic, retain) NSSet<AKUserModel *>    *friends;
-
-//+ (instancetype)userWithDictionary:(NSDictionary *)dictionary;
-//
-//- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+@property (nullable, nonatomic, retain) NSSet<AKUserImage *>    *photos;
 
 @end
 
@@ -35,6 +33,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeFriendsObject:(AKUserModel *)value;
 - (void)addFriends:(NSSet<AKUserModel *> *)values;
 - (void)removeFriends:(NSSet<AKUserModel *> *)values;
+
+- (void)addPhotosObject:(AKUserImage *)value;
+- (void)removePhotosObject:(AKUserImage *)value;
+- (void)addPhotos:(NSSet<AKUserImage *> *)values;
+- (void)removePhotos:(NSSet<AKUserImage *> *)values;
 
 @end
 

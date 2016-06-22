@@ -31,6 +31,7 @@ static NSString * const kAKNavigationItemTitle  = @"FRIENDS";
 @property (nonatomic, readonly)     AKFriendsView       *rootView;
 @property (nonatomic, strong)       AKLoadingView       *loadingView;
 
+- (void)loadWithFriends:(NSArray *)friends;
 - (void)performTransition;
 
 @end
@@ -40,12 +41,10 @@ static NSString * const kAKNavigationItemTitle  = @"FRIENDS";
 #pragma mark -
 #pragma mark View LifeCycle
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    if (self.context.state != kAKModelLoadedState) {
-        [self.rootView showLoadingViewWithMessage:kAKLoadingViewMessage animated:YES];
-    }
+    [self.rootView showLoadingViewAnimated:YES];
 }
 
 #pragma mark -
@@ -57,16 +56,6 @@ AKRootViewAndReturnIfNil(AKFriendsView);
     [super setUser:user];
     
     self.context = [[AKFriendsContext alloc] initWithUser:user];
-}
-
-- (void)setFriends:(NSArray *)friends {
-    if (_friends != friends) {
-        _friends = friends;
-        
-        AKFriendsView *rootView = self.rootView;
-        [rootView.tableView reloadData];
-        [rootView removeLoadingViewAnimated:YES];
-    }
 }
 
 - (NSString *)loadingViewMessage {
@@ -87,7 +76,6 @@ AKRootViewAndReturnIfNil(AKFriendsView);
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKFriendsViewCell *cell = [tableView dequeueCellFromNibWithClass:[AKFriendsViewCell class]];
     [cell fillWithModel:self.friends[indexPath.row]];
-    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }
@@ -103,17 +91,24 @@ AKRootViewAndReturnIfNil(AKFriendsView);
 #pragma mark Public
 
 - (void)userDidLoadWithObject:(NSArray *)friends {
-    self.friends = friends;
-    [self.user saveManagedObject];
+    [self loadWithFriends:friends];
 }
 
-- (void)userDidFail:(AKUserModel *)user {
-    [super userDidFail:user];
+- (void)userDidFailToLoad:(AKUserModel *)user {
+    [super userDidFailToLoad:user];
     
+    [self loadWithFriends:[user.friends allObjects]];
 }
 
 #pragma mark -
 #pragma mark Private
+
+- (void)loadWithFriends:(NSArray *)friends {
+    self.friends = friends;
+    AKFriendsView *rootView = self.rootView;
+    [rootView.tableView reloadData];
+    [self.rootView removeLoadingViewAnimated:YES];
+}
 
 - (void)performTransition  {
     CATransition *transition = [CATransition animation];

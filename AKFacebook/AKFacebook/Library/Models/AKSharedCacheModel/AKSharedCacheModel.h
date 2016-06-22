@@ -12,9 +12,9 @@
 
 + (instancetype)sharedCache;
 
-- (NSString *)keyForValue:(NSString *)value;
-- (BOOL)isCahedForKey:(NSString *)key;
-- (void)addValueForKey:(NSString *)key;
-- (void)removeValueForKey:(NSString *)key;
+- (NSString *)URLStringForFileName:(NSString *)fileName;
+- (BOOL)isCahedForURLString:(NSString *)URLString;
+- (void)addFileNameForURLString:(NSString *)URLString;
+- (void)removeFileNameForURLString:(NSString *)URLString;
 
 @end

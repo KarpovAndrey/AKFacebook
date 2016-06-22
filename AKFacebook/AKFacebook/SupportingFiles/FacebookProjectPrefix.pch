@@ -19,5 +19,6 @@
 #import "UINib+AKCategory.h"
 #import "NSFileManager+AKCategory.h"
 #import "NSBundle+AKCategory.h"
+#import "UINavigationController+AKCategory.h"
 
 #endif /* IOSProject_Prefix_pch */

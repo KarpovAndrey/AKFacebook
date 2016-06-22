@@ -12,12 +12,15 @@
 #import "AKFriendsDetailView.h"
 #import "AKUserContext.h"
 #import "AKUserModel.h"
+#import "AKFriendsPhotosViewController.h"
 
 static NSString * const kAKNavigationItemTitle  = @"FRIEND DETAIL";
 static NSString * const kAKLoadingViewMessage   = @"Show must go on";
 
 @interface AKFriendsDetailViewController ()
 @property (nonatomic, readonly) AKFriendsDetailView       *rootView;
+
+- (void)load;
 
 @end
 
@@ -26,10 +29,11 @@ static NSString * const kAKLoadingViewMessage   = @"Show must go on";
 #pragma mark -
 #pragma mark View LifeCycle
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     [self.rootView showLoadingViewWithMessage:kAKLoadingViewMessage animated:YES];
+
 }
 
 #pragma mark -
@@ -48,18 +52,30 @@ AKRootViewAndReturnIfNil(AKFriendsDetailView);
 }
 
 #pragma mark -
-#pragma mark Private
+#pragma mark Handling Interrface
 
-- (void)userDidLoadWithObject:(AKUserModel *)user {
-    [user saveManagedObject];
-    AKFriendsDetailView *rootView = self.rootView;
-    [rootView fillWithModel:self.user];
-    [rootView removeLoadingViewAnimated:YES];
+- (IBAction)onClickShowPhotosButton:(id)sender {
+    AKFriendsPhotosViewController *controller = [AKFriendsPhotosViewController new];
+    controller.user = self.user;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
-- (void)userDidFail:(AKUserModel *)user {
-    [super userDidFail:user];
-    
+#pragma mark -
+#pragma mark Public
+
+- (void)userDidLoadWithObject:(AKUserModel *)user {
+    [self load];
+}
+
+- (void)userDidFailToLoad:(AKUserModel *)user {
+    [super userDidFailToLoad:user];
+    [self load];
+}
+
+#pragma mark -
+#pragma mark Privete
+
+- (void)load {
     AKFriendsDetailView *rootView = self.rootView;
     [rootView fillWithModel:self.user];
     [rootView removeLoadingViewAnimated:YES];

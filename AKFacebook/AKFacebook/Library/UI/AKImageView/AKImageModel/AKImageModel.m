@@ -20,8 +20,10 @@
 @property (nonatomic, strong)   NSURLSession                *session;
 @property (nonatomic, strong)   NSURLSessionDownloadTask    *downloadTask;
 
+- (void)loadFromFileSystem;
 - (void)deleteIfNeeded;
 - (void)performDownload;
+- (void)dump;
 
 @end
 
@@ -39,7 +41,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSURLSessionConfiguration *config = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         self.session = [NSURLSession sessionWithConfiguration:config];
     }
     
@@ -69,7 +71,9 @@
 }
 
 - (BOOL)isCached {
-    return [[AKSharedCacheModel sharedCache] isCahedForKey:self.absoluteStringValue];
+    NSLog(@"%d", [self.sharedCacheModel isCahedForURLString:self.absoluteStringValue]);
+
+    return [self.sharedCacheModel isCahedForURLString:self.absoluteStringValue];
 }
 
 - (NSString *)fileName {
@@ -98,7 +102,7 @@
     if (self.isCached) {
         NSError *error = nil;
         if ([[NSFileManager defaultManager] removeItemAtPath:self.path error:&error]) {
-            [self.sharedCacheModel removeValueForKey:self.absoluteStringValue];
+            [self.sharedCacheModel removeFileNameForURLString:self.absoluteStringValue];
         }
     }
 }
@@ -118,7 +122,7 @@
                 [fileManager copyItemAtURL:location toURL:[NSURL fileURLWithPath:path] error:&fileError];
                 
                 if (!fileError) {
-                    [self.sharedCacheModel addValueForKey:self.absoluteStringValue];
+                    [self.sharedCacheModel addFileNameForURLString:self.absoluteStringValue];
                 }
                 
                 [self loadFromFileSystem];
@@ -161,11 +165,10 @@
 - (void)completeLoading {
     AKWeakify;
     AKDispatchAsyncOnMainThread(^{
-        AKStrongifyAndReturnIfNil;
+        AKStrongifySelfWithClass(AKImageModel);
         NSUInteger state = strongSelf.image ? kAKModelLoadedState : kAKModelFailedState;
         [strongSelf setState:state withObject:strongSelf.image];
     });
 }
 
 @end
-

@@ -65,7 +65,7 @@ static NSString * const kAKActionTitle              = @"OK";
         
         [_context addHandler:^(id object) {
             AKStrongifyAndReturnIfNil
-            [strongSelf userDidFail:object];
+            [strongSelf userDidFailToLoad:object];
         }forState:kAKModelFailedState
                       object:self];
         
@@ -103,7 +103,7 @@ static NSString * const kAKActionTitle              = @"OK";
     
 }
 
-- (void)userDidFail:(id)object {
+- (void)userDidFailToLoad:(id)object {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:kAKAllertControllerTitle
                                                                    message:kAKAllertControllerMessage
                                                             preferredStyle:UIAlertControllerStyleAlert];

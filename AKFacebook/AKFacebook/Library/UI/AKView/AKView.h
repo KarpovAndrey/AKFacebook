@@ -11,6 +11,7 @@
 @interface AKView: UIView
 
 - (void)showLoadingView;
+- (void)showLoadingViewWithDefaultMessageAnimated:(BOOL)animated;
 - (void)showLoadingViewAnimated:(BOOL)animated;
 - (void)showLoadingViewWithMessage:(NSString *)message;
 - (void)showLoadingViewWithMessage:(NSString *)message animated:(BOOL)animated;

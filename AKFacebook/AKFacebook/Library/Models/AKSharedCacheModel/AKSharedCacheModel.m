@@ -8,20 +8,20 @@
 
 #import "AKSharedCacheModel.h"
 
-static NSString * const kAKSharedCacheModelName    = @"sharedCache.plist";
-static NSString * const kAKSharedCacheModelKey   = @"sharedCache";
+static NSString * const kAKSharedCacheModelName        = @"sharedCache.plist";
+static NSString * const kAKStringCachedFiles           = @"sharedCacheFiles";
 
 static AKSharedCacheModel * model = nil;
 
 @interface AKSharedCacheModel ()
 @property (nonatomic, strong)   NSMutableDictionary     *cachedFiles;
 @property (nonatomic, readonly) NSString                *path;
-@property (nonatomic, readonly) NSArray                 *notificationsKeys;
+@property (nonatomic, readonly) NSArray                 *notificationsURLStrings;
 
 @property (nonatomic, readonly, getter=isCached) BOOL   cached;
 
-- (void)addObserversWithKeys:(NSArray *)keys;
-- (void)removeObserversWithKeys:(NSArray *)keys;
+- (void)addObserversWithURLStrings:(NSArray *)URLStrings;
+- (void)removeObserversWithURLStrings:(NSArray *)URLStrings;
 - (void)save;
 
 @end
@@ -29,7 +29,7 @@ static AKSharedCacheModel * model = nil;
 @implementation AKSharedCacheModel
 
 @dynamic path;
-@dynamic notificationsKeys;
+@dynamic notificationsURLStrings;
 
 #pragma mark -
 #pragma mark Class Methods
@@ -45,7 +45,7 @@ static AKSharedCacheModel * model = nil;
             model.cachedFiles = [NSMutableDictionary dictionary];
         }
         
-        [model addObserversWithKeys:model.notificationsKeys];
+        [model addObserversWithURLStrings:model.notificationsURLStrings];
     });
     
     return model;
@@ -55,7 +55,7 @@ static AKSharedCacheModel * model = nil;
 #pragma mark Initializations & Deallocations
 
 - (void)dealloc {
-    [self removeObserversWithKeys:self.notificationsKeys];
+    [self removeObserversWithURLStrings:self.notificationsURLStrings];
 }
 
 #pragma mark -
@@ -65,27 +65,31 @@ static AKSharedCacheModel * model = nil;
     return [NSFileManager pathToFileWithName:kAKSharedCacheModelName];
 }
 
-- (NSArray *)notificationsKeys {
+- (NSArray *)notificationsURLStrings {
     return @[UIApplicationDidEnterBackgroundNotification, UIApplicationWillTerminateNotification];
 }
 
 #pragma mark -
 #pragma mark Private
 
-- (void)addObserversWithKeys:(NSArray *)keys {
-    for (NSString *key in keys) {
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(save)
-                                                     name:key
-                                                   object:nil];
+- (void)addObserversWithURLStrings:(NSArray *)URLStrings {
+    @synchronized (self) {
+        for (NSString *URLString in URLStrings) {
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(save)
+                                                         name:URLString
+                                                       object:nil];
+        }
     }
 }
 
-- (void)removeObserversWithKeys:(NSArray *)keys {
-    for (NSString *key in keys) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                        name:key
-                                                      object:nil];
+- (void)removeObserversWithURLStrings:(NSArray *)URLStrings {
+    @synchronized (self) {
+        for (NSString *URLString in URLStrings) {
+            [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                            name:URLString
+                                                          object:nil];
+        }
     }
 }
 
@@ -96,41 +100,45 @@ static AKSharedCacheModel * model = nil;
 #pragma mark -
 #pragma mark Public
 
-- (NSString *)keyForValue:(NSString *)value {
-    NSArray *keys = self.cachedFiles.allKeys;
-    NSDictionary *dictionary = [self.cachedFiles copy];
-    for (NSString *key in keys) {
-        if ([[dictionary objectForKey:key] isEqualToString:value]) {
-            return key;
+- (NSString *)URLStringForFileName:(NSString *)fileName {
+    @synchronized (self) {
+        NSArray *URLStrings = self.cachedFiles.allKeys;
+        NSDictionary *dictionary = [self.cachedFiles copy];
+        for (NSString *URLString in URLStrings) {
+            if ([[dictionary objectForKey:URLString] isEqualToString:fileName]) {
+                return URLString;
+            }
         }
     }
     
     return nil;
 }
 
-- (BOOL)isCahedForKey:(NSString *)key {
-    return [self.cachedFiles objectForKey:key];
+- (BOOL)isCahedForURLString:(NSString *)URLString {
+    @synchronized (self) {
+        return [self.cachedFiles objectForKey:URLString];
+    }
 }
 
-- (void)addValueForKey:(NSString *)key {
+- (void)addFileNameForURLString:(NSString *)URLString {
     @synchronized (self) {
-        if ([self isCahedForKey:key]) {
+        if ([self isCahedForURLString:URLString]) {
             return;
         } else {
-            NSString *stringValue = [key lastPathComponent];
-            NSString *stringKey = [self keyForValue:stringValue];
-            if (stringKey) {
-                [self removeValueForKey:stringKey];
+            NSString *stringfileName = [URLString lastPathComponent];
+            NSString *stringURLString = [self URLStringForFileName:stringfileName];
+            if (stringURLString) {
+                [self removeFileNameForURLString:stringURLString];
             }
             
-            [self.cachedFiles setObject:stringValue forKey:key];
+            [self.cachedFiles setObject:stringfileName forKey:URLString];
         }
     }
 }
 
-- (void)removeValueForKey:(NSString *)key {
+- (void)removeFileNameForURLString:(NSString *)URLString {
     @synchronized (self) {
-        [self.cachedFiles removeObjectForKey:key];
+        [self.cachedFiles removeObjectForKey:URLString];
     }
 }
 
@@ -138,13 +146,13 @@ static AKSharedCacheModel * model = nil;
 #pragma mark NSCoding Protocol
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:self.cachedFiles forKey:kAKSharedCacheModelKey];
+    [aCoder encodeObject:self.cachedFiles forKey:kAKStringCachedFiles];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
-        self.cachedFiles = [aDecoder decodeObjectForKey:kAKSharedCacheModelKey];
+        self.cachedFiles = [aDecoder decodeObjectForKey:kAKStringCachedFiles];
     }
     
     return self;

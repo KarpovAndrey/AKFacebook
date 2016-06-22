@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="AKUserImage" representedClassName="AKUserImage" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURLPath" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AKUserModel" inverseName="photos" inverseEntity="AKUserModel" syncable="YES"/>
+    </entity>
     <entity name="AKUserModel" representedClassName="AKUserModel" syncable="YES">
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,8 +15,10 @@
         <attribute name="smallPicture" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="wasLogged" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AKUserModel" inverseName="friends" inverseEntity="AKUserModel" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AKUserImage" inverseName="user" inverseEntity="AKUserImage" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AKUserModel" positionX="2320" positionY="-2916" width="128" height="178"/>
+        <element name="AKUserModel" positionX="2086" positionY="-2871" width="128" height="193"/>
+        <element name="AKUserImage" positionX="2331" positionY="-2835" width="128" height="88"/>
     </elements>
 </model>

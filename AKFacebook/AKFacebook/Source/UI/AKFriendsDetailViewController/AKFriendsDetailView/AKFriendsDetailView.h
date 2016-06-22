@@ -15,6 +15,7 @@
 @property (nonatomic, strong) IBOutlet  UILabel     *nameLabel;
 @property (nonatomic, strong) IBOutlet  UILabel     *genderLabel;
 @property (nonatomic, strong) IBOutlet  AKImageView *userImage;
+@property (nonatomic, strong) IBOutlet  UIButton    *showPhotosButton;
 
 - (void)fillWithModel:(AKUserModel *)user;
 

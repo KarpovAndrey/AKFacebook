@@ -9,9 +9,10 @@
 #import "AKView.h"
 #import "AKLoadingView.h"
 
-static CGFloat const kAKDefaultAnimateDuration  = 0.3;
-static CGFloat const kAKDefaultLoadingAlpha     = 0.9;
-static CGFloat const kAKDefaultRemovingAlpha    = 0.2;
+static CGFloat      const kAKDefaultAnimateDuration      = 0.3;
+static CGFloat      const kAKDefaultLoadingAlpha         = 0.9;
+static CGFloat      const kAKDefaultRemovingAlpha        = 0.2;
+static NSString*    const kAKDefaultLoadingMessage       = @"LOADING";
 
 @interface AKView ()
 @property (nonatomic, strong) AKLoadingView *loadingView;
@@ -33,6 +34,10 @@ static CGFloat const kAKDefaultRemovingAlpha    = 0.2;
 
 - (void)showLoadingViewWithMessage:(NSString *)message {
     [self showLoadingViewWithMessage:message animated:NO];
+}
+
+- (void)showLoadingViewWithDefaultMessageAnimated:(BOOL)animated {
+    [self showLoadingViewWithMessage:kAKDefaultLoadingMessage animated:YES];
 }
 
 - (void)showLoadingViewWithMessage:(NSString *)message animated:(BOOL)animated {

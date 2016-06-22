@@ -7,6 +7,7 @@
 //
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "IDPActiveRecordKit.h"
 
 #import "AKContext.h"
 #import "AKFacebookConstants.h"
@@ -55,8 +56,9 @@
     {
         if (!error) {
             [self parseData:result];
+            [self.user saveManagedObject];
         } else {
-            [self setState:kAKModelFailedState withObject:self.user.friends];
+            [self setState:kAKModelFailedState withObject:self.user];
         }
     }];
 }

@@ -12,4 +12,6 @@
 
 @interface AKFriendsDetailViewController : AKCustomViewController
 
+- (IBAction)onClickShowPhotosButton:(id)sender;
+
 @end

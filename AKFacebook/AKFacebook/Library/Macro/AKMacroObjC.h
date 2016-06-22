@@ -15,6 +15,12 @@
 #define AKWeakifyWithClass(theClass) \
             __weak theClass *weakSelf = self;
 
+#define AKStrongifySelfWithClass(classObject) \
+                    __strong classObject *strongSelf = weakSelf; \
+                        if (!strongSelf) { \
+                    return; \
+                    }
+
 #define AKStrongifyAndReturnIfNil \
             __strong __typeof(self) strongSelf = weakSelf;\
                 if (!strongSelf) { \

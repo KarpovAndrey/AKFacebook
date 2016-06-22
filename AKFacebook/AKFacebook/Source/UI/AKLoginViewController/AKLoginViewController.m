@@ -29,6 +29,7 @@ static NSString * const kAKActionTitle              = @"OK";
 @property (nonatomic, strong)   AKFriendsViewController *friendsViewController;
 
 - (void)showAlert;
+- (void)loginWithID:(NSString *)ID;
 
 @end
 
@@ -38,17 +39,6 @@ static NSString * const kAKActionTitle              = @"OK";
 #pragma mark Accessors
 
 AKRootViewAndReturnIfNil(AKLoginView);
-
-- (void)setUser:(AKUserModel *)user {
-    if (_user != user) {
-        _user = user;
-        
-        _user.wasLogged = YES;
-        AKFriendsViewController *controller = self.friendsViewController;
-        controller.user = user;
-        [self.navigationController pushViewController:controller animated:NO];
-    }
-}
 
 #pragma mark -
 #pragma mark View LifeCycle
@@ -63,19 +53,19 @@ AKRootViewAndReturnIfNil(AKLoginView);
 #pragma mark Handling Interrface
 
 - (IBAction)onClickLoginButton:(id)sender {
-    self.friendsViewController = [AKFriendsViewController new];
 
     FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
     if (token) {
-        self.user = [AKUserModel objectWithID:token.userID];
+        [self loginWithID:token.userID];
     } else {
         FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+        [login logOut];
         [login
          logInWithReadPermissions:kAKFacebookPermissions
          fromViewController:self
          handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
              if (!error && !result.isCancelled) {
-                 self.user = [AKUserModel objectWithID:result.token.userID];
+                 [self loginWithID:result.token.userID];
              } else {
                  [self showAlert];
              }
@@ -85,6 +75,12 @@ AKRootViewAndReturnIfNil(AKLoginView);
 
 #pragma mark -
 #pragma mark Private
+
+- (void)loginWithID:(NSString *)ID {
+    AKFriendsViewController *controller = [AKFriendsViewController new];
+    controller.user = [AKUserModel objectWithID:ID];
+    [self.navigationController pushViewController:controller animated:NO];
+}
 
 - (void)showAlert {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:kAKAllertControllerTitle

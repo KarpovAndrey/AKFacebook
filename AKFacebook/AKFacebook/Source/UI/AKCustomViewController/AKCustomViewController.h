@@ -16,6 +16,6 @@
 @property (nonatomic, strong)       AKContext       *context;
 
 - (void)userDidLoadWithObject:(id)object;
-- (void)userDidFail:(id)object;
+- (void)userDidFailToLoad:(id)object;
 
 @end
