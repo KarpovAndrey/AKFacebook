@@ -16,14 +16,8 @@
 #pragma mark -
 #pragma mark Public
 
-- (void)fillWithModel:(AKUserModel *)user {
-    NSString *path = nil;
-    
-    for (AKUserImage *image in [user.photos allObjects]) {
-        path = image.imageURLPath;
-    }
-    
-    self.cellImageView.URL = [NSURL URLWithString:path];
+- (void)fillWithPhoto:(AKUserImage *)photo {
+    self.cellImageView.URL = [NSURL URLWithString:photo.imageURLPath];
 }
 
 @end

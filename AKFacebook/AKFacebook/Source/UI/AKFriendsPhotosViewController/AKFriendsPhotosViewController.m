@@ -37,26 +37,41 @@ AKRootViewAndReturnIfNil(AKFriendsPhotosViewController);
     return kAKNavigationItemTitle;
 }
 
+- (void)setPhotos:(NSArray *)photos {
+    if (_photos != photos) {
+        _photos = photos;
+        
+        [self.rootView.collectionView reloadData];
+    }
+}
+
 #pragma mark -
 #pragma mark View LifeCycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.rootView.collectionView registerNib:[UINib loadFromNibWithClass:[AKFriendsPhotosCell class]] forCellWithReuseIdentifier:NSStringFromClass([AKFriendsPhotosCell class])];
     if (self.context.state == kAKModelLoadingState) {
         [self.rootView showLoadingViewWithDefaultMessageAnimated:YES];
     }
 }
 
 #pragma mark -
-#pragma mark UITableViewDataSource Protocol
+#pragma mark UICollectionViewDataSource Protool
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.photos.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AKFriendsPhotosCell *cell = [tableView dequeueCellFromNibWithClass:[AKFriendsPhotosCell class]];
-    [cell fillWithModel:self.photos[indexPath.row]];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    AKFriendsPhotosCell *cell = [collectionView
+                                      dequeueReusableCellFromNibWithClass:[AKFriendsPhotosCell class]
+                                      indexPath:indexPath];
+    
+    [cell fillWithPhoto:self.photos[indexPath.row]];
     
     return cell;
 }
@@ -64,19 +79,15 @@ AKRootViewAndReturnIfNil(AKFriendsPhotosViewController);
 #pragma mark -
 #pragma mark Public
 
-- (void)userDidLoadWithObject:(NSSet *)userPhotos {
-    AKFriendsPhotosView *rootView = self.rootView;
-    self.photos = [userPhotos allObjects];
-    [rootView.tableView reloadData];
+- (void)userDidLoadWithObject:(NSArray *)photos {
+    self.photos = photos;
     [self.rootView removeLoadingViewAnimated:YES];
 }
 
-- (void)userDidFailToLoad:(AKUserModel *)user {
-    [super userDidFailToLoad:user];
-    AKFriendsPhotosView *rootView = self.rootView;
-    self.photos = [user.photos allObjects];
-    [rootView.tableView reloadData];
-    [self.rootView removeLoadingViewAnimated:YES];
-}
+//- (void)userDidFailToLoad {
+//    [super userDidFailToLoad:user];
+//    self.photos = [user.photos allObjects];
+//    [self.rootView removeLoadingViewAnimated:YES];
+//}
 
 @end

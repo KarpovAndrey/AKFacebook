@@ -27,29 +27,21 @@
 
 - (void)parseData:(NSDictionary *)result {
     AKUserModel *user = self.user;
-    
-    NSMutableSet *userPhotos = [NSMutableSet new];
-    NSLog(@"%@", [result valueForKeyPath:kAKAlbumsKey]);
-    NSDictionary *albums = [result valueForKeyPath:kAKAlbumsKey];
-    NSDictionary *data = [albums valueForKey:@"data"];
-    NSDictionary *photos = [data valueForKey:@"photos"];
-    NSDictionary *photosData = [photos valueForKey:@"data"];
-    NSArray *images = [photosData valueForKey:@"images"];
-    for (NSArray *array in images) {
-        for (NSArray *smallArray in array) {
-            for (NSDictionary *dictionary in smallArray) {
-                NSLog(@"%@", [dictionary valueForKey:@"source"]);
-                AKUserImage *userImage = [AKUserImage objectWithID:self.user.ID];
-                userImage.imageURLPath = [dictionary valueForKey:@"source"];
-                
-                [userPhotos addObject:userImage];
-            }
+    NSArray *array = [result valueForKeyPath:kAKAlbumsDataKey];
+    for (NSDictionary *album in array) {
+        NSArray *photos = [album valueForKeyPath:kAKPhotoDataKey];
+        for (NSDictionary *photoDictionaty in photos) {
+            NSString *IDString = [photoDictionaty valueForKey:kAKUserIDKey];
+            AKUserImage *userPhoto = [AKUserImage objectWithID:IDString];
+            NSString *URLString = [photoDictionaty valueForKey:kAKPictureKey];
+            userPhoto.imageURLPath = URLString;
+            userPhoto.user = self.user;
+            
+            [user addPhotosObject:userPhoto];
         }
     }
     
-    user.photos = userPhotos;
-    
-    [self setState:kAKModelLoadedState withObject:userPhotos];
+    [self setState:kAKModelLoadedState withObject:user.photos];
 }
 
 @end

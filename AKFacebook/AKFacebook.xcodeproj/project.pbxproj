@@ -79,6 +79,7 @@
 		84E851FF1D13389400EC75E5 /* AKUserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84E851FD1D13389400EC75E5 /* AKUserModel.xcdatamodeld */; };
 		84E852041D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E852011D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m */; };
 		84E852051D133D6500EC75E5 /* AKUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E852031D133D6500EC75E5 /* AKUserModel.m */; };
+		84F8BFD41D1C79CE00484648 /* UICollectionView+AKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BFD31D1C79CE00484648 /* UICollectionView+AKCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -216,6 +217,8 @@
 		84E852011D133D6500EC75E5 /* AKUserModel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AKUserModel+CoreDataProperties.m"; sourceTree = "<group>"; };
 		84E852021D133D6500EC75E5 /* AKUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUserModel.h; sourceTree = "<group>"; };
 		84E852031D133D6500EC75E5 /* AKUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUserModel.m; sourceTree = "<group>"; };
+		84F8BFD21D1C79CE00484648 /* UICollectionView+AKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+AKCategory.h"; sourceTree = "<group>"; };
+		84F8BFD31D1C79CE00484648 /* UICollectionView+AKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+AKCategory.m"; sourceTree = "<group>"; };
 		8D64EE2CAA465223CE802759 /* Pods-AKFacebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKFacebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKFacebook/Pods-AKFacebook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -477,6 +480,7 @@
 		84C80CC91D0B535900A4365F /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				84F8BFD11D1C79AE00484648 /* UICollectionView+AKCategory */,
 				842A3BE11D1AFBAB00809E25 /* UINavigationController+AKCategory */,
 				84C80CCA1D0B535900A4365F /* CGGeometry+AKCategory */,
 				84C80CCD1D0B535900A4365F /* NSBundle+AKCategory */,
@@ -876,6 +880,15 @@
 			path = AKUserCoreData;
 			sourceTree = "<group>";
 		};
+		84F8BFD11D1C79AE00484648 /* UICollectionView+AKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				84F8BFD21D1C79CE00484648 /* UICollectionView+AKCategory.h */,
+				84F8BFD31D1C79CE00484648 /* UICollectionView+AKCategory.m */,
+			);
+			path = "UICollectionView+AKCategory";
+			sourceTree = "<group>";
+		};
 		D793D474A56B7CAAB0A68E98 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1035,6 +1048,7 @@
 				842A3BF91D1B0D2D00809E25 /* AKUserImage.m in Sources */,
 				8488C07E1D0C771700132A96 /* AKFriendsViewCell.m in Sources */,
 				84C80D391D0B535900A4365F /* AKArrayModel.m in Sources */,
+				84F8BFD41D1C79CE00484648 /* UICollectionView+AKCategory.m in Sources */,
 				84C80D3E1D0B535900A4365F /* AKStringModel.m in Sources */,
 				8488C0211D0C62FD00132A96 /* AKLoadingView.m in Sources */,
 				84C80D331D0B535900A4365F /* NSObject+AKExtensions.m in Sources */,

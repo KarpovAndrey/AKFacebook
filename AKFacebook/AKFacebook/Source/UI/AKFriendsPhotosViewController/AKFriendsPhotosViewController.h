@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AKCustomViewController.h"
 
-@interface AKFriendsPhotosViewController : AKCustomViewController <UITableViewDataSource, UITableViewDelegate>
+@interface AKFriendsPhotosViewController : AKCustomViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end

@@ -11,7 +11,7 @@
 
 #define kAKFriendsRequestParameters @{@"fields":@"friends{id,first_name,last_name,friends,picture}",}
 #define kAKUserRequestParameters @{@"fields":@"id,first_name,last_name,gender,picture",}
-#define kAKPhotosRequestParameters @{@"fields":@"id,first_name,last_name,albums{link,photos{images}}",}
+#define kAKPhotosRequestParameters @{@"fields": @"albums{photos{picture}}"}
 
 #define kAKFacebookPermissions @[@"public_profile", @"user_friends", @"user_photos"]
 
@@ -26,6 +26,10 @@ static NSString * const kAKPictureURLKeyPath  = @"picture.data.url";
 static NSString * const kAKFriendsKey         = @"friends";
 static NSString * const kAKAlbumsKey          = @"albums";
 static NSString * const kAKDataKey            = @"data";
+static NSString * const kAKAlbumsDataKey      = @"albums.data";
+static NSString * const kAKPhotoDataKey       = @"photos.data";
+static NSString * const kAKPictureKey         = @"picture";
+
 
 static NSString * const kAKLargePictureURL    = @"https://graph.facebook.com/%@/picture?type=large";
 static NSString * const kAKSmallPictureURL    = @"https://graph.facebook.com/%@/picture?type=small";

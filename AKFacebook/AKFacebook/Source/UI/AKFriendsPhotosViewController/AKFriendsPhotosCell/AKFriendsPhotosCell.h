@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class AKImageView;
-@class AKUserModel;
+@class AKUserImage;
 
-@interface AKFriendsPhotosCell : UITableViewCell
+@interface AKFriendsPhotosCell : UICollectionViewCell
 @property (nonatomic, strong) IBOutlet AKImageView    *cellImageView;
 
-- (void)fillWithModel:(AKUserModel *)user;
+- (void)fillWithPhoto:(AKUserImage *)photo;
 
 @end
