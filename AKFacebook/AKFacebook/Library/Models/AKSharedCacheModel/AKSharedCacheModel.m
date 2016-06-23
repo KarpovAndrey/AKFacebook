@@ -114,24 +114,23 @@ static AKSharedCacheModel * model = nil;
     return nil;
 }
 
-- (BOOL)isCahedForURLString:(NSString *)URLString {
+- (BOOL)isCachedForURLString:(NSString *)URLString {
     @synchronized (self) {
         return [self.cachedFiles objectForKey:URLString];
     }
 }
 
-- (void)addFileNameForURLString:(NSString *)URLString {
+- (void)addFileName:(NSString *)fileName ForURLString:(NSString *)URLString {
     @synchronized (self) {
-        if ([self isCahedForURLString:URLString]) {
+        if ([self isCachedForURLString:URLString]) {
             return;
         } else {
-            NSString *stringfileName = [URLString lastPathComponent];
-            NSString *stringURLString = [self URLStringForFileName:stringfileName];
+            NSString *stringURLString = [self URLStringForFileName:fileName];
             if (stringURLString) {
                 [self removeFileNameForURLString:stringURLString];
             }
             
-            [self.cachedFiles setObject:stringfileName forKey:URLString];
+            [self.cachedFiles setObject:fileName forKey:URLString];
         }
     }
 }

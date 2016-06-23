@@ -39,15 +39,6 @@ static NSString * const kAKNavigationItemTitle  = @"FRIENDS";
 @implementation AKFriendsViewController
 
 #pragma mark -
-#pragma mark View LifeCycle
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self.rootView showLoadingViewAnimated:YES];
-}
-
-#pragma mark -
 #pragma mark Accessors
 
 AKRootViewAndReturnIfNil(AKFriendsView);
@@ -64,6 +55,16 @@ AKRootViewAndReturnIfNil(AKFriendsView);
 
 - (NSString *)navigationItemTitle {
     return kAKNavigationItemTitle;
+}
+
+#pragma mark -
+#pragma mark View LifeCycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    if (self.context.state == kAKModelLoadingState) {
+        [self.rootView showLoadingViewWithDefaultMessageAnimated:YES];
+    }
 }
 
 #pragma mark -

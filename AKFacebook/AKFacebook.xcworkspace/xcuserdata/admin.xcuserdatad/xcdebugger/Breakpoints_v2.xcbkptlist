@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AKFacebook/Source/UI/AKFriendsViewController/AKFriendsViewController.m"
-            timestampString = "488308762.92874"
+            timestampString = "488375328.796092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "-setUser:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AKFacebook/Source/UI/AKFriendsPhotosViewController/AKFriendsPhotosViewController.m"
-            timestampString = "488324480.380352"
+            timestampString = "488375328.796092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-userDidLoadWithObject:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AKFacebook/Source/UI/AKFriendsPhotosViewController/AKFriendsPhotosViewController.m"
-            timestampString = "488324480.380352"
+            timestampString = "488375328.796092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-userDidFailToLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AKFacebook/Source/UI/AKFriendsPhotosViewController/AKFriendsPhotosViewController.m"
-            timestampString = "488324480.380352"
+            timestampString = "488375328.796092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AKFacebook/Source/UI/AKFriendsPhotosViewController/AKFriendsPhotosViewController.m"
-            timestampString = "488323669.697052"
+            timestampString = "488375328.796092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -160,6 +160,22 @@
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "-fillWithModel:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AKFacebook/Library/UI/AKImageView/AKImageModel/AKImageModel.m"
+            timestampString = "488374292.805258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-prepareToLoading"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

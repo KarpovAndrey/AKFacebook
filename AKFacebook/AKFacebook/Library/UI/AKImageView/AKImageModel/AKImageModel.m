@@ -71,9 +71,9 @@
 }
 
 - (BOOL)isCached {
-    NSLog(@"%d", [self.sharedCacheModel isCahedForURLString:self.absoluteStringValue]);
+    NSLog(@"%d", [self.sharedCacheModel isCachedForURLString:self.absoluteStringValue]);
 
-    return [self.sharedCacheModel isCahedForURLString:self.absoluteStringValue];
+    return [self.sharedCacheModel isCachedForURLString:self.absoluteStringValue];
 }
 
 - (NSString *)fileName {
@@ -122,7 +122,7 @@
                 [fileManager copyItemAtURL:location toURL:[NSURL fileURLWithPath:path] error:&fileError];
                 
                 if (!fileError) {
-                    [self.sharedCacheModel addFileNameForURLString:self.absoluteStringValue];
+                    [self.sharedCacheModel addFileName:self.fileName ForURLString:self.absoluteStringValue];
                 }
                 
                 [self loadFromFileSystem];
