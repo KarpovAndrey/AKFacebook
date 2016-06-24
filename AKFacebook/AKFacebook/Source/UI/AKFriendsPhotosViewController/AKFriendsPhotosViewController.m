@@ -25,7 +25,7 @@ static NSString * const kAKNavigationItemTitle  = @"FRIEND'S PHOTOS";
 #pragma mark -
 #pragma mark Accessors
 
-AKRootViewAndReturnIfNil(AKFriendsPhotosViewController);
+AKRootViewAndReturnIfNil(AKFriendsPhotosView);
 
 - (void)setUser:(AKUserModel *)user {
     [super setUser:user];
@@ -51,7 +51,7 @@ AKRootViewAndReturnIfNil(AKFriendsPhotosViewController);
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.rootView.collectionView registerNib:[UINib loadFromNibWithClass:[AKFriendsPhotosCell class]] forCellWithReuseIdentifier:NSStringFromClass([AKFriendsPhotosCell class])];
+    [self.rootView.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([AKFriendsPhotosCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([AKFriendsPhotosCell class])];
     if (self.context.state == kAKModelLoadingState) {
         [self.rootView showLoadingViewWithDefaultMessageAnimated:YES];
     }
@@ -84,10 +84,10 @@ AKRootViewAndReturnIfNil(AKFriendsPhotosViewController);
     [self.rootView removeLoadingViewAnimated:YES];
 }
 
-//- (void)userDidFailToLoad {
-//    [super userDidFailToLoad:user];
-//    self.photos = [user.photos allObjects];
-//    [self.rootView removeLoadingViewAnimated:YES];
-//}
+- (void)userDidFailToLoad:(AKUserModel *)user {
+    [super userDidFailToLoad:user];
+    self.photos = [self.user.photos allObjects];
+    [self.rootView removeLoadingViewAnimated:YES];
+}
 
 @end

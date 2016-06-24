@@ -71,8 +71,6 @@
 }
 
 - (BOOL)isCached {
-    NSLog(@"%d", [self.sharedCacheModel isCachedForURLString:self.absoluteStringValue]);
-
     return [self.sharedCacheModel isCachedForURLString:self.absoluteStringValue];
 }
 

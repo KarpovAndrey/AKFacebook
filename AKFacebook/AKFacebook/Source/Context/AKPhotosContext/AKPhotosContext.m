@@ -41,7 +41,7 @@
         }
     }
     
-    [self setState:kAKModelLoadedState withObject:user.photos];
+    [self setState:kAKModelLoadedState withObject:[user.photos allObjects]];
 }
 
 @end

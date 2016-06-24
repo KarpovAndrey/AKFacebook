@@ -22,7 +22,7 @@
                         <size key="itemSize" width="150" height="150"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="5" minY="10" maxX="5" maxY="10"/>
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="jWN-eB-JJk"/>
@@ -30,7 +30,7 @@
                     </connections>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.033356600040000003" green="0.66183894229999995" blue="0.64319901940000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="7cL-Qe-J0d" secondAttribute="bottom" id="1yc-Lu-iRM"/>
                 <constraint firstItem="7cL-Qe-J0d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="P2k-Pt-CIY"/>
